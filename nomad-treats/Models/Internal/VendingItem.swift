@@ -36,9 +36,30 @@ class VendingItem: NSObject {
 }
 
 extension Array where Element: VendingItem {
-    func matching(_ objectID: String) -> Element? {
+    private func matching(_ objectID: String) -> Element? {
         return first { (element) -> Bool in
             element.objectID == objectID
         }
+    }
+    
+    func updateQuantity(by delta: Int, for objectID: String) {
+        if let vendingItem = matching(objectID) {
+            vendingItem.quantitySelected += delta
+        }
+    }
+    
+    func resetQuantity(for objectID: String) {
+        if let vendingItem = matching(objectID) {
+            vendingItem.quantitySelected = 0
+        }
+    }
+    
+    var totalPrice: Double {
+        var totalPrice: Double = 0
+        for item in self {
+            let subtotal = item.price * Double(item.quantitySelected)
+            totalPrice += subtotal
+        }
+        return totalPrice
     }
 }

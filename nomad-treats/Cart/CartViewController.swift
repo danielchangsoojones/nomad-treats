@@ -50,11 +50,7 @@ class CartViewController: UIViewController {
     
     private func setTotalPrice() {
         if let cartView = self.view as? CartView {
-            var totalPrice: Double = 0
-            for item in selectedVendingItems {
-                let subtotal = item.price * Double(item.quantitySelected)
-                totalPrice += subtotal
-            }
+            let totalPrice = selectedVendingItems.totalPrice
             cartView.set(totalPrice: totalPrice)
         }
     }

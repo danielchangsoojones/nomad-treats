@@ -65,17 +65,13 @@ extension HomeViewController: ItemManagementDelegate {
     }
     
     func changeQuantity(for objectID: String, by delta: Int) {
-        if let vendingItem = vendingItems.matching(objectID) {
-            vendingItem.quantitySelected += delta
-            reloadAllUI()
-        }
+        vendingItems.updateQuantity(by: delta, for: objectID)
+        reloadAllUI()
     }
     
     func resetQuantity(for objectID: String) {
-        if let vendingItem = vendingItems.matching(objectID) {
-            vendingItem.quantitySelected = 0
-            reloadAllUI()
-        }
+        vendingItems.resetQuantity(for: objectID)
+        reloadAllUI()
     }
     
     private func reloadAllUI() {

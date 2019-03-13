@@ -1,0 +1,86 @@
+//
+//  PaymentViewController.swift
+//  nomad-treats
+//
+//  Created by Daniel Jones on 3/13/19.
+//  Copyright © 2019 Chong500Productions. All rights reserved.
+//
+
+import UIKit
+
+class PaymentViewController: UIViewController {
+    private var cartVCContainer: UIView!
+    private var cartVC: CartViewController!
+    private var instructionLabel: UILabel!
+    private var usernameLabel: UILabel!
+    
+    let vendingItems: [VendingItem]
+    
+    init(vendingItems: [VendingItem]) {
+        self.vendingItems = vendingItems
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func loadView() {
+        super.loadView()
+        let paymentView = PaymentView(frame: self.view.frame)
+        self.view = paymentView
+        self.cartVCContainer = paymentView.cartVCContainer
+        self.instructionLabel = paymentView.instructionLabel
+        self.usernameLabel = paymentView.venmoUsernameLabel
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupCartVC()
+        setInstructionLabelText()
+    }
+    
+    private func setInstructionLabelText() {
+        let price = vendingItems.totalPrice.toPrice
+        instructionLabel.text = "Your driver will give you your items once you venmo \(price) to this address:"
+    }
+    
+    private func setVenmoUsername() {
+        if DataCache.owner == "daniel" {
+            
+        }
+    }
+}
+
+extension PaymentViewController: ItemManagementDelegate {
+    func getCurrentVendingItems() -> [VendingItem] {
+        return vendingItems
+    }
+    
+    func changeQuantity(for objectID: String, by delta: Int) {
+        vendingItems.updateQuantity(by: delta, for: objectID)
+        reloadUI()
+    }
+    
+    func resetQuantity(for objectID: String) {
+        vendingItems.resetQuantity(for: objectID)
+        reloadUI()
+    }
+    
+    private func reloadUI() {
+        cartVC.reload()
+        
+    }
+    
+    private func setupCartVC() {
+        cartVC = CartViewController(delegate: self)
+        setup(childVC: cartVC, container: cartVCContainer)
+        snap(childVC: cartVC)
+    }
+    
+    private func snap(childVC: UIViewController) {
+        childVC.view.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+    }
+}
