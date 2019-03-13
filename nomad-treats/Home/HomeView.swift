@@ -59,6 +59,8 @@ class HomeView: UIView {
     
     private func setupCartVCContainer() {
         cartVCContainer = UIView()
+        cartVCContainer.layer.borderColor = UIColor.silverChalice.cgColor
+        cartVCContainer.layer.borderWidth = 1
         addSubview(cartVCContainer)
         cartVCContainer.snp.makeConstraints { (make) in
             make.trailing.bottom.equalToSuperview()
