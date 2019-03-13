@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		925C520C22389A2000F43264 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C520B22389A2000F43264 /* AppDelegate.swift */; };
 		925C520E22389A2000F43264 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C520D22389A2000F43264 /* ViewController.swift */; };
-		925C521122389A2000F43264 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 925C520F22389A2000F43264 /* Main.storyboard */; };
 		925C521322389A2100F43264 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 925C521222389A2100F43264 /* Assets.xcassets */; };
 		925C521622389A2100F43264 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 925C521422389A2100F43264 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,7 +17,6 @@
 		925C520822389A2000F43264 /* nomad-treats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nomad-treats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		925C520B22389A2000F43264 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		925C520D22389A2000F43264 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		925C521022389A2000F43264 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		925C521222389A2100F43264 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		925C521522389A2100F43264 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		925C521722389A2100F43264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,7 +54,6 @@
 			children = (
 				925C520B22389A2000F43264 /* AppDelegate.swift */,
 				925C520D22389A2000F43264 /* ViewController.swift */,
-				925C520F22389A2000F43264 /* Main.storyboard */,
 				925C521222389A2100F43264 /* Assets.xcassets */,
 				925C521422389A2100F43264 /* LaunchScreen.storyboard */,
 				925C521722389A2100F43264 /* Info.plist */,
@@ -124,7 +121,6 @@
 			files = (
 				925C521622389A2100F43264 /* LaunchScreen.storyboard in Resources */,
 				925C521322389A2100F43264 /* Assets.xcassets in Resources */,
-				925C521122389A2000F43264 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,14 +139,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		925C520F22389A2000F43264 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				925C521022389A2000F43264 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		925C521422389A2100F43264 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -285,6 +273,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KNK3WJA66N;
 				INFOPLIST_FILE = "nomad-treats/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +292,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KNK3WJA66N;
 				INFOPLIST_FILE = "nomad-treats/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
