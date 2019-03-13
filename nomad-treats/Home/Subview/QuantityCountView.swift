@@ -41,6 +41,7 @@ class QuantityCountView: UIStackView {
         
         //TODO: eventually can remove this
         countLabel.text = String(1)
+        countLabel.textAlignment = .center
         addArrangedSubview(countLabel)
     }
     

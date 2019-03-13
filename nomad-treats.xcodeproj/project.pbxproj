@@ -26,6 +26,7 @@
 		925C52412238C6E300F43264 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52402238C6E300F43264 /* CartView.swift */; };
 		925C52442238CA7800F43264 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52432238CA7800F43264 /* Line.swift */; };
 		925C52462238CCEA00F43264 /* QuantityCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52452238CCEA00F43264 /* QuantityCountView.swift */; };
+		925C52492238CF7300F43264 /* VendingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52482238CF7300F43264 /* VendingItem.swift */; };
 		B6D968C0134308BA7F41A3D8 /* Pods_nomad_treats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7390E05CCA94E7A3C1C21A /* Pods_nomad_treats.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		925C52402238C6E300F43264 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		925C52432238CA7800F43264 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		925C52452238CCEA00F43264 /* QuantityCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityCountView.swift; sourceTree = "<group>"; };
+		925C52482238CF7300F43264 /* VendingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendingItem.swift; sourceTree = "<group>"; };
 		F9762D3B00DB0DE77BB0ED59 /* Pods-nomad-treats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomad-treats.release.xcconfig"; path = "Pods/Target Support Files/Pods-nomad-treats/Pods-nomad-treats.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +142,7 @@
 		925C52262238A25B00F43264 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				925C52472238CF5D00F43264 /* Internal */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -215,6 +218,14 @@
 				925C52432238CA7800F43264 /* Line.swift */,
 			);
 			path = "Generic Views";
+			sourceTree = "<group>";
+		};
+		925C52472238CF5D00F43264 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				925C52482238CF7300F43264 /* VendingItem.swift */,
+			);
+			path = Internal;
 			sourceTree = "<group>";
 		};
 		B33F4C23A86CF2CF4D164EFA /* Pods */ = {
@@ -363,6 +374,7 @@
 				925C52202238A19600F43264 /* Configuration.swift in Sources */,
 				925C52302238A4DA00F43264 /* UIColorExtension.swift in Sources */,
 				925C520E22389A2000F43264 /* HomeViewController.swift in Sources */,
+				925C52492238CF7300F43264 /* VendingItem.swift in Sources */,
 				925C52382238B41300F43264 /* ChoicesCollectionViewCell.swift in Sources */,
 				925C52292238A41300F43264 /* HomeView.swift in Sources */,
 				925C523C2238B8A700F43264 /* DoubleExtension.swift in Sources */,

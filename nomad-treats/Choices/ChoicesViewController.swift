@@ -8,7 +8,25 @@
 
 import UIKit
 
+protocol ChoicesVCDelegate {
+    func getCurrentVendingItems() -> [VendingItem]
+}
+
 class ChoicesViewController: UIViewController {
+    let delegate: ChoicesVCDelegate
+    var vendingItems: [VendingItem] {
+        return delegate.getCurrentVendingItems()
+    }
+    
+    init(delegate: ChoicesVCDelegate) {
+        self.delegate = delegate
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
@@ -40,12 +58,14 @@ extension ChoicesViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return vendingItems.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let item = vendingItems[indexPath.item]
         let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: ChoicesCollectionViewCell.self)
-        cell.configure(name: "Kit Kat", price: 5.0)
+        let showAddToCart = item.quantitySelected == 0
+        cell.configure(name: item.name, price: item.price, isAddToCartShowing: showAddToCart)
         return cell
     }
 }
