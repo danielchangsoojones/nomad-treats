@@ -19,6 +19,7 @@ class CartView: UIView {
     var venmoButton: UIButton!
     var cashButton: UIButton!
     private var paymentButtonStackView: UIStackView!
+    var tableView: UITableView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,6 +27,7 @@ class CartView: UIView {
         setupTotalPriceLabel()
         setupPaymentButtonStackView()
         setupPayWithLabel()
+        setupTableView()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -93,5 +95,14 @@ class CartView: UIView {
     private func setupCashButton() {
         let green = UIColor(red: 50/255, green: 189/255, blue: 38/255, alpha: 1)
         cashButton = StylizedButton(text: "Cash", backgroundColor: green)
+    }
+    
+    private func setupTableView() {
+        tableView = UITableView()
+        self.addSubview(tableView)
+        tableView.snp.makeConstraints { (make) in
+            make.leading.trailing.top.equalToSuperview()
+            make.bottom.equalTo(bottomContainer.snp.top)
+        }
     }
 }

@@ -59,7 +59,6 @@ class HomeView: UIView {
     
     private func setupCartVCContainer() {
         cartVCContainer = UIView()
-        cartVCContainer.backgroundColor = .blue
         addSubview(cartVCContainer)
         cartVCContainer.snp.makeConstraints { (make) in
             make.trailing.bottom.equalToSuperview()
