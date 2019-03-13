@@ -14,6 +14,7 @@ class ChoicesCollectionViewCell: GlidingCollectionViewCell {
     private var itemNameLabel: UILabel!
     private var priceLabel: UILabel!
     private var addToCartButton: UIButton!
+    private var quantityCountView: QuantityCountView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,6 +22,7 @@ class ChoicesCollectionViewCell: GlidingCollectionViewCell {
         setShadow(color: .jellyTeal)
         setupItemPhotoImageView()
         setupBottomStackView()
+        addLine()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -30,6 +32,16 @@ class ChoicesCollectionViewCell: GlidingCollectionViewCell {
     func configure(name: String, price: Double) {
         itemNameLabel.text = name
         priceLabel.text = price.toPrice
+    }
+    
+    private func addLine() {
+        let line = Line()
+        contentView.addSubview(line)
+        line.snp.makeConstraints { (make) in
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(1)
+            make.top.equalTo(itemPhotoImageView.snp.bottom)
+        }
     }
     
     private func setupItemPhotoImageView() {
@@ -58,7 +70,8 @@ class ChoicesCollectionViewCell: GlidingCollectionViewCell {
         }
         setupItemNameLabel()
         setupPriceLabel()
-        setupAddToCartLabel()
+        setupAddToCartButton()
+        setupQuantityCounter()
     }
     
     private func setupItemNameLabel() {
@@ -73,8 +86,10 @@ class ChoicesCollectionViewCell: GlidingCollectionViewCell {
         priceLabel.textColor = .jellyTeal
         bottomStackView.addArrangedSubview(priceLabel)
     }
-    
-    private func setupAddToCartLabel() {
+}
+
+extension ChoicesCollectionViewCell {
+    private func setupAddToCartButton() {
         addToCartButton = UIButton()
         addToCartButton.setTitle("Add to cart", for: .normal)
         addToCartButton.setTitleColor(.black, for: .normal)
@@ -84,5 +99,11 @@ class ChoicesCollectionViewCell: GlidingCollectionViewCell {
         let verticalInset: CGFloat = 5
         addToCartButton.contentEdgeInsets = UIEdgeInsets(top: verticalInset, left: horizontalInset, bottom: verticalInset, right: horizontalInset)
         bottomStackView.addArrangedSubview(addToCartButton)
+    }
+    
+    private func setupQuantityCounter() {
+        quantityCountView = QuantityCountView()
+        quantityCountView.isHidden = true
+        bottomStackView.addArrangedSubview(quantityCountView)
     }
 }
