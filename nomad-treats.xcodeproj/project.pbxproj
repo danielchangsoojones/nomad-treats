@@ -11,15 +11,19 @@
 		925C520E22389A2000F43264 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C520D22389A2000F43264 /* ViewController.swift */; };
 		925C521322389A2100F43264 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 925C521222389A2100F43264 /* Assets.xcassets */; };
 		925C521622389A2100F43264 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 925C521422389A2100F43264 /* LaunchScreen.storyboard */; };
+		B6D968C0134308BA7F41A3D8 /* Pods_nomad_treats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7390E05CCA94E7A3C1C21A /* Pods_nomad_treats.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B7390E05CCA94E7A3C1C21A /* Pods_nomad_treats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nomad_treats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E0A691E19F444541C8C4B0A /* Pods-nomad-treats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomad-treats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nomad-treats/Pods-nomad-treats.debug.xcconfig"; sourceTree = "<group>"; };
 		925C520822389A2000F43264 /* nomad-treats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nomad-treats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		925C520B22389A2000F43264 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		925C520D22389A2000F43264 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		925C521222389A2100F43264 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		925C521522389A2100F43264 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		925C521722389A2100F43264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9762D3B00DB0DE77BB0ED59 /* Pods-nomad-treats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomad-treats.release.xcconfig"; path = "Pods/Target Support Files/Pods-nomad-treats/Pods-nomad-treats.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +31,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6D968C0134308BA7F41A3D8 /* Pods_nomad_treats.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57318B94B4D97C4C5E717EEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B7390E05CCA94E7A3C1C21A /* Pods_nomad_treats.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		925C51FF22389A2000F43264 = {
 			isa = PBXGroup;
 			children = (
 				925C520A22389A2000F43264 /* nomad-treats */,
 				925C520922389A2000F43264 /* Products */,
+				B33F4C23A86CF2CF4D164EFA /* Pods */,
+				57318B94B4D97C4C5E717EEA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +76,15 @@
 			path = "nomad-treats";
 			sourceTree = "<group>";
 		};
+		B33F4C23A86CF2CF4D164EFA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E0A691E19F444541C8C4B0A /* Pods-nomad-treats.debug.xcconfig */,
+				F9762D3B00DB0DE77BB0ED59 /* Pods-nomad-treats.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -68,9 +92,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 925C521A22389A2100F43264 /* Build configuration list for PBXNativeTarget "nomad-treats" */;
 			buildPhases = (
+				62A884DC88C7675FFE5F8349 /* [CP] Check Pods Manifest.lock */,
 				925C520422389A2000F43264 /* Sources */,
 				925C520522389A2000F43264 /* Frameworks */,
 				925C520622389A2000F43264 /* Resources */,
+				C88E092B0C148561D137FD21 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +151,63 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		62A884DC88C7675FFE5F8349 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-nomad-treats-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C88E092B0C148561D137FD21 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-nomad-treats/Pods-nomad-treats-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Former/Former.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Former.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-nomad-treats/Pods-nomad-treats-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		925C520422389A2000F43264 /* Sources */ = {
@@ -268,12 +351,13 @@
 		};
 		925C521B22389A2100F43264 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E0A691E19F444541C8C4B0A /* Pods-nomad-treats.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KNK3WJA66N;
 				INFOPLIST_FILE = "nomad-treats/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,12 +371,13 @@
 		};
 		925C521C22389A2100F43264 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9762D3B00DB0DE77BB0ED59 /* Pods-nomad-treats.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KNK3WJA66N;
 				INFOPLIST_FILE = "nomad-treats/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
