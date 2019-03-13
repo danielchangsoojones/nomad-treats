@@ -64,7 +64,7 @@ class HomeView: UIView {
         cartVCContainer.snp.makeConstraints { (make) in
             make.trailing.bottom.equalToSuperview()
             make.top.equalTo(topBar.snp.bottom)
-            make.width.equalTo(325)
+            make.width.equalTo(CartView.Constants.width)
         }
     }
     
