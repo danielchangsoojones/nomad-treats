@@ -10,6 +10,10 @@ import Foundation
 import Parse
 
 class VendingItemParse: BaseParseObject, PFSubclassing {
+    struct Keys {
+        static let owner = "owner"
+    }
+    
     class func parseClassName() -> String {
         return "VendingItem"
     }

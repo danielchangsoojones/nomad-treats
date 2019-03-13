@@ -17,11 +17,15 @@ class VendingItem: NSObject {
         return vendingItemParse.price
     }
     
-    var quantitySelected: Int = 0
-    
     var objectID: String {
         return vendingItemParse.objectId ?? ""
     }
+    
+    var imageFile: AnyObject? {
+        return vendingItemParse.photo
+    }
+    
+    var quantitySelected: Int = 0
     
     let vendingItemParse: VendingItemParse
     

@@ -34,6 +34,7 @@
 		925C52562238EEF100F43264 /* VendingItemParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52552238EEF100F43264 /* VendingItemParse.swift */; };
 		925C52582238EF3400F43264 /* BaseParseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52572238EF3400F43264 /* BaseParseObject.swift */; };
 		925C525B2238F1C400F43264 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C525A2238F1C400F43264 /* SettingsViewController.swift */; };
+		925C525D2238F44900F43264 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C525C2238F44900F43264 /* UIImageViewExtension.swift */; };
 		B6D968C0134308BA7F41A3D8 /* Pods_nomad_treats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7390E05CCA94E7A3C1C21A /* Pods_nomad_treats.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		925C52552238EEF100F43264 /* VendingItemParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendingItemParse.swift; sourceTree = "<group>"; };
 		925C52572238EF3400F43264 /* BaseParseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseParseObject.swift; sourceTree = "<group>"; };
 		925C525A2238F1C400F43264 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		925C525C2238F44900F43264 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		F9762D3B00DB0DE77BB0ED59 /* Pods-nomad-treats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomad-treats.release.xcconfig"; path = "Pods/Target Support Files/Pods-nomad-treats/Pods-nomad-treats.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -195,6 +197,7 @@
 		925C522E2238A4CC00F43264 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				925C525C2238F44900F43264 /* UIImageViewExtension.swift */,
 				925C523B2238B8A700F43264 /* DoubleExtension.swift */,
 				925C522F2238A4DA00F43264 /* UIColorExtension.swift */,
 				925C52342238B2C800F43264 /* UIViewControllerExtension.swift */,
@@ -443,6 +446,7 @@
 				925C52502238E1D100F43264 /* UnderlinedButton.swift in Sources */,
 				925C52332238B19F00F43264 /* ChoicesViewController.swift in Sources */,
 				925C52462238CCEA00F43264 /* QuantityCountView.swift in Sources */,
+				925C525D2238F44900F43264 /* UIImageViewExtension.swift in Sources */,
 				925C523A2238B45800F43264 /* GlidingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

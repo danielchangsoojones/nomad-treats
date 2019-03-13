@@ -35,7 +35,8 @@ class CartTableViewCell: UITableViewCell, Reusable {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(name: String, price: Double, quantity: Int) {
+    func configure(name: String, price: Double, quantity: Int, imageFile: AnyObject?) {
+        itemImageView.loadFromFile(imageFile)
         nameLabel.text = name
         priceLabel.text = price.toPrice
         quantityCountView.set(count: quantity)

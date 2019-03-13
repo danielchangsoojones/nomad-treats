@@ -44,6 +44,10 @@ class ChoicesCollectionViewCell: GlidingCollectionViewCell {
         self.minusQuantityAction = minusQuantityAction
     }
     
+    func setImage(with file: AnyObject?) {
+        itemPhotoImageView.loadFromFile(file)
+    }
+    
     private func addLine() {
         let line = Line()
         contentView.addSubview(line)

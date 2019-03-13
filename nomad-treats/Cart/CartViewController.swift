@@ -73,7 +73,10 @@ extension CartViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let vendingItem = selectedVendingItems[indexPath.row]
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: CartTableViewCell.self)
-        cell.configure(name: vendingItem.name, price: vendingItem.price, quantity: vendingItem.quantitySelected)
+        cell.configure(name: vendingItem.name,
+                       price: vendingItem.price,
+                       quantity: vendingItem.quantitySelected,
+                       imageFile: vendingItem.imageFile)
         
         cell.set(quantityChangedAction: { [weak self] delta in
             self?.delegate.changeQuantity(for: vendingItem.objectID, by: delta)

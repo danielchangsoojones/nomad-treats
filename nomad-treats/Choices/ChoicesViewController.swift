@@ -73,6 +73,8 @@ extension ChoicesViewController: UICollectionViewDataSource {
         }, minusQuantityAction: { [weak self] in
             self?.delegate.changeQuantity(for: item.objectID, by: -1)
         })
+        
+        cell.setImage(with: item.imageFile)
         return cell
     }
     
