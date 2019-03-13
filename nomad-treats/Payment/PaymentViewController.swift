@@ -76,7 +76,7 @@ extension PaymentViewController: ItemManagementDelegate {
     }
     
     private func setupCartVC() {
-        cartVC = CartViewController(delegate: self)
+        cartVC = CartViewController(delegate: self, shouldShowPaymentButtons: false)
         setup(childVC: cartVC, container: cartVCContainer)
         snap(childVC: cartVC)
         cartVC.reload()

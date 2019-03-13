@@ -38,6 +38,11 @@ class CartView: UIView {
         totalPriceLabel.text = "Total: \(totalPrice.toPrice)"
     }
     
+    func hidePaymentButtons() {
+        payWithLabel.isHidden = true
+        paymentButtonStackView.isHidden = true
+    }
+    
     private func createBottomContainer() {
         bottomContainer = UIView()
         bottomContainer.backgroundColor = .aquamarineBlue

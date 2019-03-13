@@ -92,7 +92,7 @@ extension HomeViewController: ItemManagementDelegate {
     }
     
     private func setupCartVC() {
-        cartVC = CartViewController(delegate: self)
+        cartVC = CartViewController(delegate: self, shouldShowPaymentButtons: true)
         setup(childVC: cartVC, container: cartVCContainer)
         snap(childVC: cartVC)
     }

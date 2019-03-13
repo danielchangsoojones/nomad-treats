@@ -12,6 +12,7 @@ import SCLAlertView
 class CartViewController: UIViewController {
     let delegate: ItemManagementDelegate
     var tableView: UITableView!
+    let shouldShowPaymentButtons: Bool
     
     var selectedVendingItems: [VendingItem] {
         let vendingItems = delegate.getCurrentVendingItems()
@@ -21,8 +22,9 @@ class CartViewController: UIViewController {
         return selected
     }
     
-    init(delegate: ItemManagementDelegate) {
+    init(delegate: ItemManagementDelegate, shouldShowPaymentButtons: Bool) {
         self.delegate = delegate
+        self.shouldShowPaymentButtons = shouldShowPaymentButtons
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -37,6 +39,10 @@ class CartViewController: UIViewController {
         self.tableView = cartView.tableView
         cartView.cashButton.addTarget(self, action: #selector(cashButtonPressed), for: .touchUpInside)
         cartView.venmoButton.addTarget(self, action: #selector(venmoButtonPressed), for: .touchUpInside)
+        
+        if !shouldShowPaymentButtons {
+            cartView.hidePaymentButtons()
+        }
     }
 
     override func viewDidLoad() {
