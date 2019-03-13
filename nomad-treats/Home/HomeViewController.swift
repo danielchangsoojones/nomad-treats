@@ -29,12 +29,12 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setupChoicesVC()
         setupCartVC()
-        loadItems()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        loadItems()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

@@ -8,6 +8,7 @@
 
 import UIKit
 import Former
+import SCLAlertView
 
 class SettingsViewController: UIViewController {
     let tableView: UITableView = UITableView(frame: CGRect.zero, style: .grouped)
@@ -27,6 +28,7 @@ class SettingsViewController: UIViewController {
     private func setupRefreshDataRow() {
         addTappableLabelRow(title: "Refresh Data Cache", onSelected: {
             DataCache().updateCaches()
+            SCLAlertView().showSuccess("It should be updated")
         })
     }
 }
