@@ -67,18 +67,20 @@ class ChoicesCollectionViewCell: GlidingCollectionViewCell {
     
     private func setupPriceLabel() {
         priceLabel = UILabel()
-        priceLabel.font = .systemFont(ofSize: 20, weight: .light)
+        priceLabel.font = .systemFont(ofSize: 22, weight: .light)
         priceLabel.textColor = .jellyTeal
         bottomStackView.addArrangedSubview(priceLabel)
     }
     
     private func setupAddToCartLabel() {
-        let frame = CGRect(x: 0, y: 0, width: self.frame.width * 0.8, height: 30)
-        addToCartButton = UIButton(frame: frame)
+        addToCartButton = UIButton()
         addToCartButton.setTitle("Add to cart", for: .normal)
         addToCartButton.setTitleColor(.black, for: .normal)
         addToCartButton.backgroundColor = .aquamarineBlue
         addToCartButton.layer.cornerRadius = 5
+        let horizontalInset: CGFloat = frame.width * 0.2
+        let verticalInset: CGFloat = 5
+        addToCartButton.contentEdgeInsets = UIEdgeInsets(top: verticalInset, left: horizontalInset, bottom: verticalInset, right: horizontalInset)
         bottomStackView.addArrangedSubview(addToCartButton)
     }
 }
