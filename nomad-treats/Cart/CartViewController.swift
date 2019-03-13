@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class CartViewController: UIViewController {
     let delegate: ItemManagementDelegate
@@ -34,7 +35,7 @@ class CartViewController: UIViewController {
         let cartView = CartView(frame: self.view.frame)
         self.view = cartView
         self.tableView = cartView.tableView
-        
+        cartView.cashButton.addTarget(self, action: #selector(cashButtonPressed), for: .touchUpInside)
     }
 
     override func viewDidLoad() {
@@ -97,5 +98,11 @@ extension CartViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
+    }
+}
+
+extension CartViewController {
+    @objc private func cashButtonPressed() {
+        SCLAlertView().showSuccess("Cash", subTitle: "You can just pay cash to your current driver. They can also provide change.")
     }
 }
