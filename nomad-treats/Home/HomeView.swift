@@ -11,10 +11,14 @@ import SnapKit
 
 class HomeView: UIView {
     var topBar: TopBar!
+    var choicesVCContainer: UIView!
+    var cartVCContainer: UIView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         addTopBar()
+        setupCartVCContainer()
+        setupChoicesVCContainer()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -30,6 +34,28 @@ class HomeView: UIView {
         topBar.snp.makeConstraints { (make) in
             make.leading.trailing.top.equalToSuperview()
             make.height.equalTo(height)
+        }
+    }
+    
+    private func setupCartVCContainer() {
+        cartVCContainer = UIView()
+        cartVCContainer.backgroundColor = .blue
+        addSubview(cartVCContainer)
+        cartVCContainer.snp.makeConstraints { (make) in
+            make.trailing.bottom.equalToSuperview()
+            make.top.equalTo(topBar.snp.bottom)
+            make.width.equalTo(325)
+        }
+    }
+    
+    private func setupChoicesVCContainer() {
+        choicesVCContainer = UIView()
+        choicesVCContainer.backgroundColor = .red
+        addSubview(choicesVCContainer)
+        choicesVCContainer.snp.makeConstraints { (make) in
+            make.leading.bottom.equalToSuperview()
+            make.top.equalTo(topBar.snp.bottom)
+            make.trailing.equalTo(cartVCContainer.snp.leading)
         }
     }
 }
