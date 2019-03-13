@@ -56,7 +56,7 @@ class CartTableViewCell: UITableViewCell, Reusable {
         itemImageView.snp.makeConstraints { (make) in
             make.leading.equalToSuperview().inset(Constants.horizontalInset)
             make.height.width.equalTo(80)
-            make.bottom.equalToSuperview()
+            make.bottom.top.equalToSuperview().inset(5)
         }
     }
     
