@@ -17,6 +17,8 @@ class ChoicesCollectionViewCell: GlidingCollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        addBorder()
+        setShadow(color: .jellyTeal)
         setupItemPhotoImageView()
         setupBottomStackView()
     }

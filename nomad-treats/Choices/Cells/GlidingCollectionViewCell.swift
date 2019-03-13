@@ -26,6 +26,11 @@ class GlidingCollectionViewCell: UICollectionViewCell, Reusable {
         layer.shadowColor = color.cgColor
     }
     
+    func addBorder() {
+        contentView.layer.borderWidth = 1
+        contentView.layer.borderColor = UIColor.jellyTeal.cgColor
+    }
+    
     private func addShadow() {
         contentView.clipsToBounds = true
         

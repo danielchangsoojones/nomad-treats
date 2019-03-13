@@ -19,6 +19,7 @@ extension ChoicesViewController: UICollectionViewDataSource {
     private func setupCollectionView() {
         let layout = createCollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+        collectionView.backgroundColor = .white
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(cellType: ChoicesCollectionViewCell.self)
