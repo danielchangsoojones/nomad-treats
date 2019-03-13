@@ -30,6 +30,10 @@
 		925C524B2238DBB400F43264 /* StylizedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C524A2238DBB400F43264 /* StylizedButton.swift */; };
 		925C524E2238DFF400F43264 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C524D2238DFF400F43264 /* CartTableViewCell.swift */; };
 		925C52502238E1D100F43264 /* UnderlinedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C524F2238E1D100F43264 /* UnderlinedButton.swift */; };
+		925C52532238EEAA00F43264 /* DataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52522238EEAA00F43264 /* DataCache.swift */; };
+		925C52562238EEF100F43264 /* VendingItemParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52552238EEF100F43264 /* VendingItemParse.swift */; };
+		925C52582238EF3400F43264 /* BaseParseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52572238EF3400F43264 /* BaseParseObject.swift */; };
+		925C525B2238F1C400F43264 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C525A2238F1C400F43264 /* SettingsViewController.swift */; };
 		B6D968C0134308BA7F41A3D8 /* Pods_nomad_treats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7390E05CCA94E7A3C1C21A /* Pods_nomad_treats.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +65,10 @@
 		925C524A2238DBB400F43264 /* StylizedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StylizedButton.swift; sourceTree = "<group>"; };
 		925C524D2238DFF400F43264 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		925C524F2238E1D100F43264 /* UnderlinedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedButton.swift; sourceTree = "<group>"; };
+		925C52522238EEAA00F43264 /* DataCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCache.swift; sourceTree = "<group>"; };
+		925C52552238EEF100F43264 /* VendingItemParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendingItemParse.swift; sourceTree = "<group>"; };
+		925C52572238EF3400F43264 /* BaseParseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseParseObject.swift; sourceTree = "<group>"; };
+		925C525A2238F1C400F43264 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F9762D3B00DB0DE77BB0ED59 /* Pods-nomad-treats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomad-treats.release.xcconfig"; path = "Pods/Target Support Files/Pods-nomad-treats/Pods-nomad-treats.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +113,8 @@
 		925C520A22389A2000F43264 /* nomad-treats */ = {
 			isa = PBXGroup;
 			children = (
+				925C52592238F1AC00F43264 /* Settings */,
+				925C52512238EE9A00F43264 /* Cache */,
 				925C52272238A3FC00F43264 /* Home */,
 				925C52312238AD7100F43264 /* Choices */,
 				925C523D2238C6BA00F43264 /* Cart */,
@@ -148,6 +158,7 @@
 		925C52262238A25B00F43264 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				925C52542238EED000F43264 /* Database */,
 				925C52472238CF5D00F43264 /* Internal */,
 			);
 			path = Models;
@@ -243,6 +254,31 @@
 				925C524D2238DFF400F43264 /* CartTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		925C52512238EE9A00F43264 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				925C52522238EEAA00F43264 /* DataCache.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		925C52542238EED000F43264 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				925C52572238EF3400F43264 /* BaseParseObject.swift */,
+				925C52552238EEF100F43264 /* VendingItemParse.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		925C52592238F1AC00F43264 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				925C525A2238F1C400F43264 /* SettingsViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		B33F4C23A86CF2CF4D164EFA /* Pods */ = {
@@ -389,8 +425,11 @@
 				925C523F2238C6D400F43264 /* CartViewController.swift in Sources */,
 				925C52352238B2C800F43264 /* UIViewControllerExtension.swift in Sources */,
 				925C52202238A19600F43264 /* Configuration.swift in Sources */,
+				925C52532238EEAA00F43264 /* DataCache.swift in Sources */,
 				925C52302238A4DA00F43264 /* UIColorExtension.swift in Sources */,
+				925C525B2238F1C400F43264 /* SettingsViewController.swift in Sources */,
 				925C524E2238DFF400F43264 /* CartTableViewCell.swift in Sources */,
+				925C52562238EEF100F43264 /* VendingItemParse.swift in Sources */,
 				925C520E22389A2000F43264 /* HomeViewController.swift in Sources */,
 				925C524B2238DBB400F43264 /* StylizedButton.swift in Sources */,
 				925C52492238CF7300F43264 /* VendingItem.swift in Sources */,
@@ -399,6 +438,7 @@
 				925C523C2238B8A700F43264 /* DoubleExtension.swift in Sources */,
 				925C52212238A19600F43264 /* Enviroment.swift in Sources */,
 				925C520C22389A2000F43264 /* AppDelegate.swift in Sources */,
+				925C52582238EF3400F43264 /* BaseParseObject.swift in Sources */,
 				925C52442238CA7800F43264 /* Line.swift in Sources */,
 				925C52502238E1D100F43264 /* UnderlinedButton.swift in Sources */,
 				925C52332238B19F00F43264 /* ChoicesViewController.swift in Sources */,

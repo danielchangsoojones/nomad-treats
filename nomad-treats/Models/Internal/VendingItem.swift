@@ -9,17 +9,24 @@
 import Foundation
 
 class VendingItem: NSObject {
-    var name: String
-    var price: Double
+    var name: String {
+        return vendingItemParse.name
+    }
+    
+    var price: Double {
+        return vendingItemParse.price
+    }
+    
     var quantitySelected: Int = 0
     
     var objectID: String {
-        return "This should eventually be the database objectID"
+        return vendingItemParse.objectId ?? ""
     }
     
-    init(name: String, price: Double) {
-        self.name = name
-        self.price = price
+    let vendingItemParse: VendingItemParse
+    
+    init(vendingItemParse: VendingItemParse) {
+        self.vendingItemParse = vendingItemParse
         super.init()
     }
 }

@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     private var cartVC: CartViewController!
     private var cartVCContainer: UIView!
     
-    private var vendingItems: [VendingItem] = [VendingItem(name: "Kit Kat", price: 5.0), VendingItem(name: "Starburst", price: 2.5)]
+    private var vendingItems: [VendingItem] = []
     
     override func loadView() {
         super.loadView()
@@ -22,12 +22,14 @@ class HomeViewController: UIViewController {
         self.view = homeView
         self.choicesVCContainer = homeView.choicesVCContainer
         self.cartVCContainer = homeView.cartVCContainer
+        homeView.topBar.leftButton.addTarget(self, action: #selector(settingsButtonPressed), for: .touchUpInside)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupChoicesVC()
         setupCartVC()
+        loadItems()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,6 +44,18 @@ class HomeViewController: UIViewController {
     
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    private func loadItems() {
+        DataCache().loadItems(shouldUpdateCache: false, completion: { vendingItems in
+            self.vendingItems = vendingItems
+            self.reloadAllUI()
+        })
+    }
+    
+    @objc private func settingsButtonPressed() {
+        let settingVC = SettingsViewController()
+        self.navigationController?.pushViewController(settingVC, animated: true)
     }
 }
 
@@ -80,9 +94,7 @@ extension HomeViewController: ItemManagementDelegate {
             make.edges.equalToSuperview()
         }
     }
-}
-
-extension HomeViewController {
+    
     private func setupCartVC() {
         cartVC = CartViewController(delegate: self)
         setup(childVC: cartVC, container: cartVCContainer)
