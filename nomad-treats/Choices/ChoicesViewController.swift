@@ -8,15 +8,18 @@
 
 import UIKit
 
-protocol ChoicesVCDelegate {
+protocol ChoicesVCDelegate: class {
     func getCurrentVendingItems() -> [VendingItem]
+    func addQuantity(at index: Int)
+    func minusQuantity(at index: Int)
 }
 
 class ChoicesViewController: UIViewController {
-    let delegate: ChoicesVCDelegate
+    unowned let delegate: ChoicesVCDelegate
     var vendingItems: [VendingItem] {
         return delegate.getCurrentVendingItems()
     }
+    var collectionView: UICollectionView!
     
     init(delegate: ChoicesVCDelegate) {
         self.delegate = delegate
@@ -36,7 +39,7 @@ class ChoicesViewController: UIViewController {
 extension ChoicesViewController: UICollectionViewDataSource {
     private func setupCollectionView() {
         let layout = createCollectionViewFlowLayout()
-        let collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+        collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         collectionView.backgroundColor = .white
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -66,7 +69,17 @@ extension ChoicesViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: ChoicesCollectionViewCell.self)
         let showAddToCart = item.quantitySelected == 0
         cell.configure(name: item.name, price: item.price, isAddToCartShowing: showAddToCart)
+        cell.setButtonActions(increaseQuantityAction: { [weak self] in
+            self?.delegate.addQuantity(at: indexPath.item)
+        }, minusQuantityAction: { [weak self] in
+            self?.delegate.minusQuantity(at: indexPath.item)
+        })
         return cell
+    }
+    
+    func reload() {
+        let indexSet = IndexSet(integer: 0)
+        collectionView.reloadSections(indexSet)
     }
 }
 

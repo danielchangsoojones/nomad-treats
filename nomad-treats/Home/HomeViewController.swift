@@ -10,6 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     private var choicesVCContainer: UIView!
+    private var choicesVC: ChoicesViewController!
     private var vendingItems: [VendingItem] = [VendingItem(name: "Kit Kat", price: 5.0), VendingItem(name: "Starburst", price: 2.5)]
     
     override func loadView() {
@@ -44,8 +45,21 @@ extension HomeViewController: ChoicesVCDelegate {
         return vendingItems
     }
     
+    func addQuantity(at index: Int) {
+        updateView(at: index, by: 1)
+    }
+    
+    func minusQuantity(at index: Int) {
+        updateView(at: index, by: -1)
+    }
+    
+    private func updateView(at index: Int, by amount: Int) {
+        vendingItems[index].quantitySelected += amount
+        choicesVC.reload()
+    }
+    
     private func setupChoicesVC() {
-        let choicesVC = ChoicesViewController(delegate: self)
+        choicesVC = ChoicesViewController(delegate: self)
         setup(childVC: choicesVC, container: choicesVCContainer)
         snap(childVC: choicesVC)
     }
@@ -55,7 +69,5 @@ extension HomeViewController: ChoicesVCDelegate {
             make.edges.equalToSuperview()
         }
     }
-    
-    
 }
 

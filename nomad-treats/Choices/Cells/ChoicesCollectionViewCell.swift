@@ -15,6 +15,8 @@ class ChoicesCollectionViewCell: GlidingCollectionViewCell {
     private var priceLabel: UILabel!
     private var addToCartButton: UIButton!
     private var quantityCountView: QuantityCountView!
+    private var increaseQuantityAction: (() -> Void)?
+    private var minusQuantityAction: (() -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,6 +36,11 @@ class ChoicesCollectionViewCell: GlidingCollectionViewCell {
         priceLabel.text = price.toPrice
         addToCartButton.isHidden = !isAddToCartShowing
         quantityCountView.isHidden = isAddToCartShowing
+    }
+    
+    func setButtonActions(increaseQuantityAction: @escaping () -> Void, minusQuantityAction: @escaping () -> Void) {
+        self.increaseQuantityAction = increaseQuantityAction
+        self.minusQuantityAction = minusQuantityAction
     }
     
     private func addLine() {
@@ -97,15 +104,30 @@ extension ChoicesCollectionViewCell {
         addToCartButton.setTitleColor(.black, for: .normal)
         addToCartButton.backgroundColor = .aquamarineBlue
         addToCartButton.layer.cornerRadius = 5
+        addToCartButton.addTarget(self, action: #selector(addToCartButtonPressed), for: .touchUpInside)
         let horizontalInset: CGFloat = frame.width * 0.2
         let verticalInset: CGFloat = 5
         addToCartButton.contentEdgeInsets = UIEdgeInsets(top: verticalInset, left: horizontalInset, bottom: verticalInset, right: horizontalInset)
         bottomStackView.addArrangedSubview(addToCartButton)
     }
     
+    @objc private func addToCartButtonPressed() {
+        increaseQuantityAction?()
+    }
+    
     private func setupQuantityCounter() {
         quantityCountView = QuantityCountView()
+        quantityCountView.minusButton.addTarget(self, action: #selector(minusButtonPressed), for: .touchUpInside)
+        quantityCountView.plusButton.addTarget(self, action: #selector(plusButtonPressed), for: .touchUpInside)
         quantityCountView.isHidden = true
         bottomStackView.addArrangedSubview(quantityCountView)
+    }
+    
+    @objc private func minusButtonPressed() {
+        minusQuantityAction?()
+    }
+    
+    @objc private func plusButtonPressed() {
+        increaseQuantityAction?()
     }
 }
