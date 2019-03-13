@@ -12,6 +12,7 @@ protocol ItemManagementDelegate: class {
     func getCurrentVendingItems() -> [VendingItem]
     func changeQuantity(for objectID: String, by delta: Int)
     func resetQuantity(for objectID: String)
+    func pushToPaymentVC()
 }
 
 class ChoicesViewController: UIViewController {

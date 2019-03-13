@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     private var cartVCContainer: UIView!
     
     private var vendingItems: [VendingItem] = []
+    private var shouldUpdateVendingItems = true
     
     override func loadView() {
         super.loadView()
@@ -47,10 +48,14 @@ class HomeViewController: UIViewController {
     }
     
     private func loadItems() {
-        DataCache().loadItems(shouldUpdateCache: false, completion: { vendingItems in
-            self.vendingItems = vendingItems
-            self.reloadAllUI()
-        })
+        if shouldUpdateVendingItems {
+            DataCache().loadItems(shouldUpdateCache: false, completion: { vendingItems in
+                self.vendingItems = vendingItems
+                self.reloadAllUI()
+            })
+        } else {
+            shouldUpdateVendingItems = true
+        }
     }
     
     @objc private func settingsButtonPressed() {
@@ -72,6 +77,12 @@ extension HomeViewController: ItemManagementDelegate {
     func resetQuantity(for objectID: String) {
         vendingItems.resetQuantity(for: objectID)
         reloadAllUI()
+    }
+    
+    func pushToPaymentVC() {
+        shouldUpdateVendingItems = false
+        let paymentVC = PaymentViewController(vendingItems: vendingItems)
+        self.navigationController?.pushViewController(paymentVC, animated: true)
     }
     
     private func reloadAllUI() {

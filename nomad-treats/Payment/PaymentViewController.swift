@@ -56,6 +56,8 @@ class PaymentViewController: UIViewController {
 }
 
 extension PaymentViewController: ItemManagementDelegate {
+    func pushToPaymentVC() {}
+    
     func getCurrentVendingItems() -> [VendingItem] {
         return vendingItems
     }

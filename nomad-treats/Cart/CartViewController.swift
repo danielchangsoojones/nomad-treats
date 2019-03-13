@@ -110,7 +110,6 @@ extension CartViewController {
     }
     
     @objc private func venmoButtonPressed() {
-        let paymentVC = PaymentViewController(vendingItems: delegate.getCurrentVendingItems())
-        self.navigationController?.pushViewController(paymentVC, animated: true)
+        delegate.pushToPaymentVC()
     }
 }
