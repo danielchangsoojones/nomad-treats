@@ -68,7 +68,7 @@ extension ChoicesViewController: UICollectionViewDataSource {
         let item = vendingItems[indexPath.item]
         let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: ChoicesCollectionViewCell.self)
         let showAddToCart = item.quantitySelected == 0
-        cell.configure(name: item.name, price: item.price, isAddToCartShowing: showAddToCart)
+        cell.configure(name: item.name, price: item.price, quantitySelected: item.quantitySelected, isAddToCartShowing: showAddToCart)
         cell.setButtonActions(increaseQuantityAction: { [weak self] in
             self?.delegate.addQuantity(at: indexPath.item)
         }, minusQuantityAction: { [weak self] in

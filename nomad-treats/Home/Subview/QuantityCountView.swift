@@ -11,7 +11,7 @@ import UIKit
 class QuantityCountView: UIStackView {
     var minusButton: UIButton!
     var plusButton: UIButton!
-    let countLabel = UILabel()
+    private let countLabel = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,6 +26,10 @@ class QuantityCountView: UIStackView {
     
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func set(count: Int) {
+        countLabel.text = String(count)
     }
     
     private func setupMinusButton() {

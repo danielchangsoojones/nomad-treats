@@ -31,11 +31,12 @@ class ChoicesCollectionViewCell: GlidingCollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(name: String, price: Double, isAddToCartShowing: Bool) {
+    func configure(name: String, price: Double, quantitySelected: Int, isAddToCartShowing: Bool) {
         itemNameLabel.text = name
         priceLabel.text = price.toPrice
         addToCartButton.isHidden = !isAddToCartShowing
         quantityCountView.isHidden = isAddToCartShowing
+        quantityCountView.set(count: quantitySelected)
     }
     
     func setButtonActions(increaseQuantityAction: @escaping () -> Void, minusQuantityAction: @escaping () -> Void) {
