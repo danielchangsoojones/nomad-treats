@@ -36,6 +36,7 @@ class CartViewController: UIViewController {
         self.view = cartView
         self.tableView = cartView.tableView
         cartView.cashButton.addTarget(self, action: #selector(cashButtonPressed), for: .touchUpInside)
+        cartView.venmoButton.addTarget(self, action: #selector(venmoButtonPressed), for: .touchUpInside)
     }
 
     override func viewDidLoad() {
@@ -100,5 +101,10 @@ extension CartViewController: UITableViewDelegate {
 extension CartViewController {
     @objc private func cashButtonPressed() {
         SCLAlertView().showSuccess("Cash", subTitle: "You can just pay cash to your current driver. They can also provide change.")
+    }
+    
+    @objc private func venmoButtonPressed() {
+        let paymentVC = PaymentViewController(vendingItems: delegate.getCurrentVendingItems())
+        self.navigationController?.pushViewController(paymentVC, animated: true)
     }
 }

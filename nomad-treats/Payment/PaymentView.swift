@@ -37,6 +37,7 @@ class PaymentView: UIView {
     
     private func setupPaymentContainer() {
         paymentContainer = UIView()
+        paymentContainer.backgroundColor = .white
         addSubview(paymentContainer)
         paymentContainer.snp.makeConstraints { (make) in
             make.leading.top.bottom.equalToSuperview()
@@ -47,17 +48,18 @@ class PaymentView: UIView {
     }
     
     private func setupInstructionLabel() {
-        instructionLabel = createLabel()
+        instructionLabel = createLabel(fontSize: 36)
         instructionLabel.numberOfLines = 4
         paymentContainer.addSubview(instructionLabel)
         instructionLabel.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
-            make.top.equalToSuperview().offset(37)
+            make.leading.trailing.equalToSuperview().inset(60)
+            make.centerY.equalToSuperview().offset(-50)
         }
     }
     
     private func setupVenmoUsernameLabel() {
-        venmoUsernameLabel = createLabel()
+        venmoUsernameLabel = createLabel(fontSize: 50)
         venmoUsernameLabel.textColor = .jellyTeal
         paymentContainer.addSubview(venmoUsernameLabel)
         venmoUsernameLabel.snp.makeConstraints { (make) in
@@ -66,9 +68,9 @@ class PaymentView: UIView {
         }
     }
     
-    private func createLabel() -> UILabel {
+    private func createLabel(fontSize: CGFloat) -> UILabel {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 36, weight: .bold)
+        label.font = .systemFont(ofSize: fontSize, weight: .bold)
         label.textAlignment = .center
         return label
     }

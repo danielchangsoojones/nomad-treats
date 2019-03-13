@@ -38,6 +38,7 @@ class PaymentViewController: UIViewController {
         super.viewDidLoad()
         setupCartVC()
         setInstructionLabelText()
+        setVenmoUsername()
     }
     
     private func setInstructionLabelText() {
@@ -47,7 +48,9 @@ class PaymentViewController: UIViewController {
     
     private func setVenmoUsername() {
         if DataCache.owner == "daniel" {
-            
+            usernameLabel.text = "@Daniel-Jones-30"
+        } else {
+            usernameLabel.text = "@Michael-McHugh-4"
         }
     }
 }
@@ -69,13 +72,14 @@ extension PaymentViewController: ItemManagementDelegate {
     
     private func reloadUI() {
         cartVC.reload()
-        
+        setInstructionLabelText()
     }
     
     private func setupCartVC() {
         cartVC = CartViewController(delegate: self)
         setup(childVC: cartVC, container: cartVCContainer)
         snap(childVC: cartVC)
+        cartVC.reload()
     }
     
     private func snap(childVC: UIViewController) {
