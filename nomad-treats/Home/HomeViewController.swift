@@ -11,6 +11,9 @@ import UIKit
 class HomeViewController: UIViewController {
     private var choicesVCContainer: UIView!
     private var choicesVC: ChoicesViewController!
+    private var cartVC: CartViewController!
+    private var cartVCContainer: UIView!
+    
     private var vendingItems: [VendingItem] = [VendingItem(name: "Kit Kat", price: 5.0), VendingItem(name: "Starburst", price: 2.5)]
     
     override func loadView() {
@@ -18,11 +21,13 @@ class HomeViewController: UIViewController {
         let homeView = HomeView(frame: self.view.frame)
         self.view = homeView
         self.choicesVCContainer = homeView.choicesVCContainer
+        self.cartVCContainer = homeView.cartVCContainer
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupChoicesVC()
+        setupCartVC()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,6 +73,14 @@ extension HomeViewController: ChoicesVCDelegate {
         childVC.view.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
+    }
+}
+
+extension HomeViewController {
+    private func setupCartVC() {
+        cartVC = CartViewController()
+        setup(childVC: cartVC, container: cartVCContainer)
+        snap(childVC: cartVC)
     }
 }
 
