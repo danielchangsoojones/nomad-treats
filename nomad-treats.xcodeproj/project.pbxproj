@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		925C520C22389A2000F43264 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C520B22389A2000F43264 /* AppDelegate.swift */; };
-		925C520E22389A2000F43264 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C520D22389A2000F43264 /* ViewController.swift */; };
+		925C520E22389A2000F43264 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C520D22389A2000F43264 /* HomeViewController.swift */; };
 		925C521322389A2100F43264 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 925C521222389A2100F43264 /* Assets.xcassets */; };
 		925C521622389A2100F43264 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 925C521422389A2100F43264 /* LaunchScreen.storyboard */; };
+		925C52202238A19600F43264 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C521E2238A19600F43264 /* Configuration.swift */; };
+		925C52212238A19600F43264 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C521F2238A19600F43264 /* Enviroment.swift */; };
+		925C52252238A23B00F43264 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52242238A23B00F43264 /* Server.swift */; };
+		925C52292238A41300F43264 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52282238A41300F43264 /* HomeView.swift */; };
 		B6D968C0134308BA7F41A3D8 /* Pods_nomad_treats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7390E05CCA94E7A3C1C21A /* Pods_nomad_treats.framework */; };
 /* End PBXBuildFile section */
 
@@ -19,10 +23,14 @@
 		2E0A691E19F444541C8C4B0A /* Pods-nomad-treats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomad-treats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nomad-treats/Pods-nomad-treats.debug.xcconfig"; sourceTree = "<group>"; };
 		925C520822389A2000F43264 /* nomad-treats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nomad-treats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		925C520B22389A2000F43264 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		925C520D22389A2000F43264 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		925C520D22389A2000F43264 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		925C521222389A2100F43264 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		925C521522389A2100F43264 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		925C521722389A2100F43264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		925C521E2238A19600F43264 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		925C521F2238A19600F43264 /* Enviroment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
+		925C52242238A23B00F43264 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		925C52282238A41300F43264 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F9762D3B00DB0DE77BB0ED59 /* Pods-nomad-treats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomad-treats.release.xcconfig"; path = "Pods/Target Support Files/Pods-nomad-treats/Pods-nomad-treats.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,13 +75,57 @@
 		925C520A22389A2000F43264 /* nomad-treats */ = {
 			isa = PBXGroup;
 			children = (
-				925C520B22389A2000F43264 /* AppDelegate.swift */,
-				925C520D22389A2000F43264 /* ViewController.swift */,
+				925C52272238A3FC00F43264 /* Home */,
+				925C52222238A22200F43264 /* App Delegate */,
+				925C521D2238A17E00F43264 /* Database Setup */,
+				925C52262238A25B00F43264 /* Models */,
 				925C521222389A2100F43264 /* Assets.xcassets */,
 				925C521422389A2100F43264 /* LaunchScreen.storyboard */,
 				925C521722389A2100F43264 /* Info.plist */,
 			);
 			path = "nomad-treats";
+			sourceTree = "<group>";
+		};
+		925C521D2238A17E00F43264 /* Database Setup */ = {
+			isa = PBXGroup;
+			children = (
+				925C521E2238A19600F43264 /* Configuration.swift */,
+				925C521F2238A19600F43264 /* Enviroment.swift */,
+			);
+			path = "Database Setup";
+			sourceTree = "<group>";
+		};
+		925C52222238A22200F43264 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				925C52232238A22800F43264 /* Launch With Options */,
+				925C520B22389A2000F43264 /* AppDelegate.swift */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		925C52232238A22800F43264 /* Launch With Options */ = {
+			isa = PBXGroup;
+			children = (
+				925C52242238A23B00F43264 /* Server.swift */,
+			);
+			path = "Launch With Options";
+			sourceTree = "<group>";
+		};
+		925C52262238A25B00F43264 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		925C52272238A3FC00F43264 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				925C520D22389A2000F43264 /* HomeViewController.swift */,
+				925C52282238A41300F43264 /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		B33F4C23A86CF2CF4D164EFA /* Pods */ = {
@@ -214,7 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				925C520E22389A2000F43264 /* ViewController.swift in Sources */,
+				925C52252238A23B00F43264 /* Server.swift in Sources */,
+				925C52202238A19600F43264 /* Configuration.swift in Sources */,
+				925C520E22389A2000F43264 /* HomeViewController.swift in Sources */,
+				925C52292238A41300F43264 /* HomeView.swift in Sources */,
+				925C52212238A19600F43264 /* Enviroment.swift in Sources */,
 				925C520C22389A2000F43264 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
