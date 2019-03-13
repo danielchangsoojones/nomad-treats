@@ -8,20 +8,20 @@
 
 import UIKit
 
-protocol ChoicesVCDelegate: class {
+protocol ItemManagementDelegate: class {
     func getCurrentVendingItems() -> [VendingItem]
-    func addQuantity(at index: Int)
-    func minusQuantity(at index: Int)
+    func changeQuantity(for objectID: String, by delta: Int)
+    func resetQuantity(for objectID: String)
 }
 
 class ChoicesViewController: UIViewController {
-    unowned let delegate: ChoicesVCDelegate
+    unowned let delegate: ItemManagementDelegate
     var vendingItems: [VendingItem] {
         return delegate.getCurrentVendingItems()
     }
     var collectionView: UICollectionView!
     
-    init(delegate: ChoicesVCDelegate) {
+    init(delegate: ItemManagementDelegate) {
         self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
     }
@@ -42,7 +42,6 @@ extension ChoicesViewController: UICollectionViewDataSource {
         collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         collectionView.backgroundColor = .white
         collectionView.dataSource = self
-        collectionView.delegate = self
         collectionView.register(cellType: ChoicesCollectionViewCell.self)
         self.view.addSubview(collectionView)
         collectionView.snp.makeConstraints { (make) in
@@ -70,9 +69,9 @@ extension ChoicesViewController: UICollectionViewDataSource {
         let showAddToCart = item.quantitySelected == 0
         cell.configure(name: item.name, price: item.price, quantitySelected: item.quantitySelected, isAddToCartShowing: showAddToCart)
         cell.setButtonActions(increaseQuantityAction: { [weak self] in
-            self?.delegate.addQuantity(at: indexPath.item)
+            self?.delegate.changeQuantity(for: item.objectID, by: 1)
         }, minusQuantityAction: { [weak self] in
-            self?.delegate.minusQuantity(at: indexPath.item)
+            self?.delegate.changeQuantity(for: item.objectID, by: -1)
         })
         return cell
     }
@@ -81,8 +80,4 @@ extension ChoicesViewController: UICollectionViewDataSource {
         let indexSet = IndexSet(integer: 0)
         collectionView.reloadSections(indexSet)
     }
-}
-
-extension ChoicesViewController: UICollectionViewDelegate {
-    
 }

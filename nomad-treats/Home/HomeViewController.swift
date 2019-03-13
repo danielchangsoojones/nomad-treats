@@ -45,22 +45,28 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: ChoicesVCDelegate {
+extension HomeViewController: ItemManagementDelegate {
     func getCurrentVendingItems() -> [VendingItem] {
         return vendingItems
     }
     
-    func addQuantity(at index: Int) {
-        updateView(at: index, by: 1)
+    func changeQuantity(for objectID: String, by delta: Int) {
+        if let vendingItem = vendingItems.matching(objectID) {
+            vendingItem.quantitySelected += delta
+            reloadAllUI()
+        }
     }
     
-    func minusQuantity(at index: Int) {
-        updateView(at: index, by: -1)
+    func resetQuantity(for objectID: String) {
+        if let vendingItem = vendingItems.matching(objectID) {
+            vendingItem.quantitySelected = 0
+            reloadAllUI()
+        }
     }
     
-    private func updateView(at index: Int, by amount: Int) {
-        vendingItems[index].quantitySelected += amount
+    private func reloadAllUI() {
         choicesVC.reload()
+        cartVC.reload()
     }
     
     private func setupChoicesVC() {
@@ -78,7 +84,7 @@ extension HomeViewController: ChoicesVCDelegate {
 
 extension HomeViewController {
     private func setupCartVC() {
-        cartVC = CartViewController()
+        cartVC = CartViewController(delegate: self)
         setup(childVC: cartVC, container: cartVCContainer)
         snap(childVC: cartVC)
     }
