@@ -16,7 +16,7 @@ class ChoicesViewController: UIViewController {
     
     private func setupCollectionView() {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 60, height: 60)
+        layout.itemSize = CGSize(width: 194, height: 258)
         
         let collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         collectionView.dataSource = self
@@ -36,7 +36,7 @@ extension ChoicesViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: ChoicesCollectionViewCell.self)
-        cell.backgroundColor = .blue
+        cell.configure(name: "Kit Kat", price: 5.0)
         return cell
     }
 }
