@@ -70,7 +70,6 @@ class HomeView: UIView {
     
     private func setupChoicesVCContainer() {
         choicesVCContainer = UIView()
-        choicesVCContainer.backgroundColor = .red
         addSubview(choicesVCContainer)
         choicesVCContainer.snp.makeConstraints { (make) in
             make.leading.bottom.equalToSuperview()

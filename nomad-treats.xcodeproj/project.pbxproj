@@ -17,6 +17,10 @@
 		925C52292238A41300F43264 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52282238A41300F43264 /* HomeView.swift */; };
 		925C522C2238A46900F43264 /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C522B2238A46900F43264 /* TopBar.swift */; };
 		925C52302238A4DA00F43264 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C522F2238A4DA00F43264 /* UIColorExtension.swift */; };
+		925C52332238B19F00F43264 /* ChoicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52322238B19F00F43264 /* ChoicesViewController.swift */; };
+		925C52352238B2C800F43264 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52342238B2C800F43264 /* UIViewControllerExtension.swift */; };
+		925C52382238B41300F43264 /* ChoicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52372238B41300F43264 /* ChoicesCollectionViewCell.swift */; };
+		925C523A2238B45800F43264 /* GlidingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52392238B45800F43264 /* GlidingCollectionViewCell.swift */; };
 		B6D968C0134308BA7F41A3D8 /* Pods_nomad_treats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7390E05CCA94E7A3C1C21A /* Pods_nomad_treats.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +39,10 @@
 		925C52282238A41300F43264 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		925C522B2238A46900F43264 /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 		925C522F2238A4DA00F43264 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		925C52322238B19F00F43264 /* ChoicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesViewController.swift; sourceTree = "<group>"; };
+		925C52342238B2C800F43264 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		925C52372238B41300F43264 /* ChoicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesCollectionViewCell.swift; sourceTree = "<group>"; };
+		925C52392238B45800F43264 /* GlidingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlidingCollectionViewCell.swift; sourceTree = "<group>"; };
 		F9762D3B00DB0DE77BB0ED59 /* Pods-nomad-treats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomad-treats.release.xcconfig"; path = "Pods/Target Support Files/Pods-nomad-treats/Pods-nomad-treats.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,8 +87,8 @@
 		925C520A22389A2000F43264 /* nomad-treats */ = {
 			isa = PBXGroup;
 			children = (
-				925C52312238AD7100F43264 /* Choices */,
 				925C52272238A3FC00F43264 /* Home */,
+				925C52312238AD7100F43264 /* Choices */,
 				925C52222238A22200F43264 /* App Delegate */,
 				925C521D2238A17E00F43264 /* Database Setup */,
 				925C52262238A25B00F43264 /* Models */,
@@ -155,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				925C522F2238A4DA00F43264 /* UIColorExtension.swift */,
+				925C52342238B2C800F43264 /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -162,8 +171,19 @@
 		925C52312238AD7100F43264 /* Choices */ = {
 			isa = PBXGroup;
 			children = (
+				925C52362238B3FC00F43264 /* Cells */,
+				925C52322238B19F00F43264 /* ChoicesViewController.swift */,
 			);
 			path = Choices;
+			sourceTree = "<group>";
+		};
+		925C52362238B3FC00F43264 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				925C52392238B45800F43264 /* GlidingCollectionViewCell.swift */,
+				925C52372238B41300F43264 /* ChoicesCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		B33F4C23A86CF2CF4D164EFA /* Pods */ = {
@@ -306,12 +326,16 @@
 			files = (
 				925C522C2238A46900F43264 /* TopBar.swift in Sources */,
 				925C52252238A23B00F43264 /* Server.swift in Sources */,
+				925C52352238B2C800F43264 /* UIViewControllerExtension.swift in Sources */,
 				925C52202238A19600F43264 /* Configuration.swift in Sources */,
 				925C52302238A4DA00F43264 /* UIColorExtension.swift in Sources */,
 				925C520E22389A2000F43264 /* HomeViewController.swift in Sources */,
+				925C52382238B41300F43264 /* ChoicesCollectionViewCell.swift in Sources */,
 				925C52292238A41300F43264 /* HomeView.swift in Sources */,
 				925C52212238A19600F43264 /* Enviroment.swift in Sources */,
 				925C520C22389A2000F43264 /* AppDelegate.swift in Sources */,
+				925C52332238B19F00F43264 /* ChoicesViewController.swift in Sources */,
+				925C523A2238B45800F43264 /* GlidingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

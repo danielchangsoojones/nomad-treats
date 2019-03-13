@@ -9,15 +9,18 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    private var choicesVCContainer: UIView!
+    
     override func loadView() {
         super.loadView()
         let homeView = HomeView(frame: self.view.frame)
         self.view = homeView
+        self.choicesVCContainer = homeView.choicesVCContainer
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupChoicesVC()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,6 +35,20 @@ class HomeViewController: UIViewController {
     
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+}
+
+extension HomeViewController {
+    private func setupChoicesVC() {
+        let choicesVC = ChoicesViewController()
+        setup(childVC: choicesVC, container: choicesVCContainer)
+        snap(childVC: choicesVC)
+    }
+    
+    private func snap(childVC: UIViewController) {
+        childVC.view.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
     }
 }
 
