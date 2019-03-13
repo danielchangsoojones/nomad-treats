@@ -19,6 +19,8 @@ class HomeView: UIView {
         addTopBar()
         setupCartVCContainer()
         setupChoicesVCContainer()
+        addNomadTreatLabel()
+        setupCartLabel()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -34,6 +36,24 @@ class HomeView: UIView {
         topBar.snp.makeConstraints { (make) in
             make.leading.trailing.top.equalToSuperview()
             make.height.equalTo(height)
+        }
+    }
+    
+    private func addNomadTreatLabel() {
+        let label = TopBar.createLabel(text: "Nomad Treats")
+        topBar.addSubview(label)
+        label.snp.makeConstraints { (make) in
+            make.centerY.equalToSuperview()
+            make.centerX.equalTo(choicesVCContainer)
+        }
+    }
+    
+    private func setupCartLabel() {
+        let label = TopBar.createLabel(text: "Cart")
+        topBar.addSubview(label)
+        label.snp.makeConstraints { (make) in
+            make.centerY.equalToSuperview()
+            make.centerX.equalTo(cartVCContainer)
         }
     }
     

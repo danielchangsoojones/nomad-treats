@@ -39,4 +39,10 @@ class TopBar: UIView {
         }
     }
     
+    static func createLabel(text: String) -> UILabel {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 36, weight: .bold)
+        label.text = text
+        return label
+    }
 }
