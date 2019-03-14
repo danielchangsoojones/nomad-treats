@@ -25,6 +25,6 @@ class Server {
     }
     
     private func registerSubclasses() {
-        
+        VendingItemParse.registerSubclass()
     }
 }

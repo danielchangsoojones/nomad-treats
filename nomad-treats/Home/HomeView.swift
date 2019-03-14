@@ -59,18 +59,18 @@ class HomeView: UIView {
     
     private func setupCartVCContainer() {
         cartVCContainer = UIView()
-        cartVCContainer.backgroundColor = .blue
+        cartVCContainer.layer.borderColor = UIColor.silverChalice.cgColor
+        cartVCContainer.layer.borderWidth = 1
         addSubview(cartVCContainer)
         cartVCContainer.snp.makeConstraints { (make) in
             make.trailing.bottom.equalToSuperview()
             make.top.equalTo(topBar.snp.bottom)
-            make.width.equalTo(325)
+            make.width.equalTo(CartView.Constants.width)
         }
     }
     
     private func setupChoicesVCContainer() {
         choicesVCContainer = UIView()
-        choicesVCContainer.backgroundColor = .red
         addSubview(choicesVCContainer)
         choicesVCContainer.snp.makeConstraints { (make) in
             make.leading.bottom.equalToSuperview()

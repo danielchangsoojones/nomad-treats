@@ -17,6 +17,26 @@
 		925C52292238A41300F43264 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52282238A41300F43264 /* HomeView.swift */; };
 		925C522C2238A46900F43264 /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C522B2238A46900F43264 /* TopBar.swift */; };
 		925C52302238A4DA00F43264 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C522F2238A4DA00F43264 /* UIColorExtension.swift */; };
+		925C52332238B19F00F43264 /* ChoicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52322238B19F00F43264 /* ChoicesViewController.swift */; };
+		925C52352238B2C800F43264 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52342238B2C800F43264 /* UIViewControllerExtension.swift */; };
+		925C52382238B41300F43264 /* ChoicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52372238B41300F43264 /* ChoicesCollectionViewCell.swift */; };
+		925C523A2238B45800F43264 /* GlidingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52392238B45800F43264 /* GlidingCollectionViewCell.swift */; };
+		925C523C2238B8A700F43264 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C523B2238B8A700F43264 /* DoubleExtension.swift */; };
+		925C523F2238C6D400F43264 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C523E2238C6D400F43264 /* CartViewController.swift */; };
+		925C52412238C6E300F43264 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52402238C6E300F43264 /* CartView.swift */; };
+		925C52442238CA7800F43264 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52432238CA7800F43264 /* Line.swift */; };
+		925C52462238CCEA00F43264 /* QuantityCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52452238CCEA00F43264 /* QuantityCountView.swift */; };
+		925C52492238CF7300F43264 /* VendingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52482238CF7300F43264 /* VendingItem.swift */; };
+		925C524B2238DBB400F43264 /* StylizedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C524A2238DBB400F43264 /* StylizedButton.swift */; };
+		925C524E2238DFF400F43264 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C524D2238DFF400F43264 /* CartTableViewCell.swift */; };
+		925C52502238E1D100F43264 /* UnderlinedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C524F2238E1D100F43264 /* UnderlinedButton.swift */; };
+		925C52532238EEAA00F43264 /* DataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52522238EEAA00F43264 /* DataCache.swift */; };
+		925C52562238EEF100F43264 /* VendingItemParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52552238EEF100F43264 /* VendingItemParse.swift */; };
+		925C52582238EF3400F43264 /* BaseParseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52572238EF3400F43264 /* BaseParseObject.swift */; };
+		925C525B2238F1C400F43264 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C525A2238F1C400F43264 /* SettingsViewController.swift */; };
+		925C525D2238F44900F43264 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C525C2238F44900F43264 /* UIImageViewExtension.swift */; };
+		925C52602238FC6800F43264 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C525F2238FC6800F43264 /* PaymentViewController.swift */; };
+		925C52622238FCA400F43264 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52612238FCA400F43264 /* PaymentView.swift */; };
 		B6D968C0134308BA7F41A3D8 /* Pods_nomad_treats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7390E05CCA94E7A3C1C21A /* Pods_nomad_treats.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +55,28 @@
 		925C52282238A41300F43264 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		925C522B2238A46900F43264 /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 		925C522F2238A4DA00F43264 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		925C52322238B19F00F43264 /* ChoicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesViewController.swift; sourceTree = "<group>"; };
+		925C52342238B2C800F43264 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		925C52372238B41300F43264 /* ChoicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesCollectionViewCell.swift; sourceTree = "<group>"; };
+		925C52392238B45800F43264 /* GlidingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlidingCollectionViewCell.swift; sourceTree = "<group>"; };
+		925C523B2238B8A700F43264 /* DoubleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		925C523E2238C6D400F43264 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		925C52402238C6E300F43264 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		925C52432238CA7800F43264 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		925C52452238CCEA00F43264 /* QuantityCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityCountView.swift; sourceTree = "<group>"; };
+		925C52482238CF7300F43264 /* VendingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendingItem.swift; sourceTree = "<group>"; };
+		925C524A2238DBB400F43264 /* StylizedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StylizedButton.swift; sourceTree = "<group>"; };
+		925C524D2238DFF400F43264 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		925C524F2238E1D100F43264 /* UnderlinedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedButton.swift; sourceTree = "<group>"; };
+		925C52522238EEAA00F43264 /* DataCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCache.swift; sourceTree = "<group>"; };
+		925C52552238EEF100F43264 /* VendingItemParse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendingItemParse.swift; sourceTree = "<group>"; };
+		925C52572238EF3400F43264 /* BaseParseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseParseObject.swift; sourceTree = "<group>"; };
+		925C525A2238F1C400F43264 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		925C525C2238F44900F43264 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		925C525F2238FC6800F43264 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		925C52612238FCA400F43264 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
+		DE8DC859A41F23AD3891F489 /* Pods-nomad-treats.debug (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomad-treats.debug (staging).xcconfig"; path = "Pods/Target Support Files/Pods-nomad-treats/Pods-nomad-treats.debug (staging).xcconfig"; sourceTree = "<group>"; };
+		E8F7FB130F91080B6AAFFC92 /* Pods-nomad-treats.debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomad-treats.debug (production).xcconfig"; path = "Pods/Target Support Files/Pods-nomad-treats/Pods-nomad-treats.debug (production).xcconfig"; sourceTree = "<group>"; };
 		F9762D3B00DB0DE77BB0ED59 /* Pods-nomad-treats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomad-treats.release.xcconfig"; path = "Pods/Target Support Files/Pods-nomad-treats/Pods-nomad-treats.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,8 +121,12 @@
 		925C520A22389A2000F43264 /* nomad-treats */ = {
 			isa = PBXGroup;
 			children = (
-				925C52312238AD7100F43264 /* Choices */,
+				925C525E2238FC5200F43264 /* Payment */,
+				925C52592238F1AC00F43264 /* Settings */,
+				925C52512238EE9A00F43264 /* Cache */,
 				925C52272238A3FC00F43264 /* Home */,
+				925C52312238AD7100F43264 /* Choices */,
+				925C523D2238C6BA00F43264 /* Cart */,
 				925C52222238A22200F43264 /* App Delegate */,
 				925C521D2238A17E00F43264 /* Database Setup */,
 				925C52262238A25B00F43264 /* Models */,
@@ -121,6 +167,8 @@
 		925C52262238A25B00F43264 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				925C52542238EED000F43264 /* Database */,
+				925C52472238CF5D00F43264 /* Internal */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -139,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				925C522B2238A46900F43264 /* TopBar.swift */,
+				925C52452238CCEA00F43264 /* QuantityCountView.swift */,
 			);
 			path = Subview;
 			sourceTree = "<group>";
@@ -146,6 +195,7 @@
 		925C522D2238A4C300F43264 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				925C52422238C84700F43264 /* Generic Views */,
 				925C522E2238A4CC00F43264 /* Extensions */,
 			);
 			path = Helpers;
@@ -154,7 +204,10 @@
 		925C522E2238A4CC00F43264 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				925C525C2238F44900F43264 /* UIImageViewExtension.swift */,
+				925C523B2238B8A700F43264 /* DoubleExtension.swift */,
 				925C522F2238A4DA00F43264 /* UIColorExtension.swift */,
+				925C52342238B2C800F43264 /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -162,8 +215,89 @@
 		925C52312238AD7100F43264 /* Choices */ = {
 			isa = PBXGroup;
 			children = (
+				925C52362238B3FC00F43264 /* Cells */,
+				925C52322238B19F00F43264 /* ChoicesViewController.swift */,
 			);
 			path = Choices;
+			sourceTree = "<group>";
+		};
+		925C52362238B3FC00F43264 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				925C52392238B45800F43264 /* GlidingCollectionViewCell.swift */,
+				925C52372238B41300F43264 /* ChoicesCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		925C523D2238C6BA00F43264 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				925C524C2238DFD700F43264 /* Cells */,
+				925C523E2238C6D400F43264 /* CartViewController.swift */,
+				925C52402238C6E300F43264 /* CartView.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		925C52422238C84700F43264 /* Generic Views */ = {
+			isa = PBXGroup;
+			children = (
+				925C524A2238DBB400F43264 /* StylizedButton.swift */,
+				925C52432238CA7800F43264 /* Line.swift */,
+				925C524F2238E1D100F43264 /* UnderlinedButton.swift */,
+			);
+			path = "Generic Views";
+			sourceTree = "<group>";
+		};
+		925C52472238CF5D00F43264 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				925C52482238CF7300F43264 /* VendingItem.swift */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		925C524C2238DFD700F43264 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				925C524D2238DFF400F43264 /* CartTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		925C52512238EE9A00F43264 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				925C52522238EEAA00F43264 /* DataCache.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		925C52542238EED000F43264 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				925C52572238EF3400F43264 /* BaseParseObject.swift */,
+				925C52552238EEF100F43264 /* VendingItemParse.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		925C52592238F1AC00F43264 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				925C525A2238F1C400F43264 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		925C525E2238FC5200F43264 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				925C525F2238FC6800F43264 /* PaymentViewController.swift */,
+				925C52612238FCA400F43264 /* PaymentView.swift */,
+			);
+			path = Payment;
 			sourceTree = "<group>";
 		};
 		B33F4C23A86CF2CF4D164EFA /* Pods */ = {
@@ -171,6 +305,8 @@
 			children = (
 				2E0A691E19F444541C8C4B0A /* Pods-nomad-treats.debug.xcconfig */,
 				F9762D3B00DB0DE77BB0ED59 /* Pods-nomad-treats.release.xcconfig */,
+				DE8DC859A41F23AD3891F489 /* Pods-nomad-treats.debug (staging).xcconfig */,
+				E8F7FB130F91080B6AAFFC92 /* Pods-nomad-treats.debug (production).xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -304,14 +440,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				925C52412238C6E300F43264 /* CartView.swift in Sources */,
 				925C522C2238A46900F43264 /* TopBar.swift in Sources */,
 				925C52252238A23B00F43264 /* Server.swift in Sources */,
+				925C523F2238C6D400F43264 /* CartViewController.swift in Sources */,
+				925C52352238B2C800F43264 /* UIViewControllerExtension.swift in Sources */,
 				925C52202238A19600F43264 /* Configuration.swift in Sources */,
+				925C52532238EEAA00F43264 /* DataCache.swift in Sources */,
 				925C52302238A4DA00F43264 /* UIColorExtension.swift in Sources */,
+				925C525B2238F1C400F43264 /* SettingsViewController.swift in Sources */,
+				925C524E2238DFF400F43264 /* CartTableViewCell.swift in Sources */,
+				925C52562238EEF100F43264 /* VendingItemParse.swift in Sources */,
 				925C520E22389A2000F43264 /* HomeViewController.swift in Sources */,
+				925C524B2238DBB400F43264 /* StylizedButton.swift in Sources */,
+				925C52492238CF7300F43264 /* VendingItem.swift in Sources */,
+				925C52382238B41300F43264 /* ChoicesCollectionViewCell.swift in Sources */,
 				925C52292238A41300F43264 /* HomeView.swift in Sources */,
+				925C52602238FC6800F43264 /* PaymentViewController.swift in Sources */,
+				925C52622238FCA400F43264 /* PaymentView.swift in Sources */,
+				925C523C2238B8A700F43264 /* DoubleExtension.swift in Sources */,
 				925C52212238A19600F43264 /* Enviroment.swift in Sources */,
 				925C520C22389A2000F43264 /* AppDelegate.swift in Sources */,
+				925C52582238EF3400F43264 /* BaseParseObject.swift in Sources */,
+				925C52442238CA7800F43264 /* Line.swift in Sources */,
+				925C52502238E1D100F43264 /* UnderlinedButton.swift in Sources */,
+				925C52332238B19F00F43264 /* ChoicesViewController.swift in Sources */,
+				925C52462238CCEA00F43264 /* QuantityCountView.swift in Sources */,
+				925C525D2238F44900F43264 /* UIImageViewExtension.swift in Sources */,
+				925C523A2238B45800F43264 /* GlidingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +485,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		925C521822389A2100F43264 /* Debug */ = {
+		9255E5BC223AFA880017290A /* Debug (Production) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -388,7 +544,89 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = "Debug (Production)";
+		};
+		9255E5BD223AFA880017290A /* Debug (Production) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8F7FB130F91080B6AAFFC92 /* Pods-nomad-treats.debug (production).xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = KNK3WJA66N;
+				INFOPLIST_FILE = "nomad-treats/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dcj.Chong500Productions.nomad-treats";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "nomad-treats-development";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Debug (Production)";
+		};
+		925C521822389A2100F43264 /* Debug (Staging) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug (Staging)";
 		};
 		925C521922389A2100F43264 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -445,12 +683,12 @@
 			};
 			name = Release;
 		};
-		925C521B22389A2100F43264 /* Debug */ = {
+		925C521B22389A2100F43264 /* Debug (Staging) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E0A691E19F444541C8C4B0A /* Pods-nomad-treats.debug.xcconfig */;
+			baseConfigurationReference = DE8DC859A41F23AD3891F489 /* Pods-nomad-treats.debug (staging).xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = KNK3WJA66N;
 				INFOPLIST_FILE = "nomad-treats/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -460,17 +698,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "dcj.Chong500Productions.nomad-treats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "nomad-treats-development";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = "Debug (Staging)";
 		};
 		925C521C22389A2100F43264 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F9762D3B00DB0DE77BB0ED59 /* Pods-nomad-treats.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = KNK3WJA66N;
 				INFOPLIST_FILE = "nomad-treats/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -480,6 +720,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "dcj.Chong500Productions.nomad-treats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "nomad-treats-production";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -491,7 +732,8 @@
 		925C520322389A2000F43264 /* Build configuration list for PBXProject "nomad-treats" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				925C521822389A2100F43264 /* Debug */,
+				925C521822389A2100F43264 /* Debug (Staging) */,
+				9255E5BC223AFA880017290A /* Debug (Production) */,
 				925C521922389A2100F43264 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -500,7 +742,8 @@
 		925C521A22389A2100F43264 /* Build configuration list for PBXNativeTarget "nomad-treats" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				925C521B22389A2100F43264 /* Debug */,
+				925C521B22389A2100F43264 /* Debug (Staging) */,
+				9255E5BD223AFA880017290A /* Debug (Production) */,
 				925C521C22389A2100F43264 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
