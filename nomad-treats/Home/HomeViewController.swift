@@ -81,7 +81,7 @@ extension HomeViewController: ItemManagementDelegate {
     
     func pushToPaymentVC() {
         shouldUpdateVendingItems = false
-        let paymentVC = PaymentViewController(vendingItems: vendingItems)
+        let paymentVC = PaymentViewController(delegate: self)
         self.navigationController?.pushViewController(paymentVC, animated: true)
     }
     

@@ -14,10 +14,10 @@ class PaymentViewController: UIViewController {
     private var instructionLabel: UILabel!
     private var usernameLabel: UILabel!
     
-    let vendingItems: [VendingItem]
+    unowned var delegate: ItemManagementDelegate
     
-    init(vendingItems: [VendingItem]) {
-        self.vendingItems = vendingItems
+    init(delegate: ItemManagementDelegate) {
+        self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -42,7 +42,7 @@ class PaymentViewController: UIViewController {
     }
     
     private func setInstructionLabelText() {
-        let price = vendingItems.totalPrice.toPrice
+        let price = delegate.getCurrentVendingItems().totalPrice.toPrice
         instructionLabel.text = "Your driver will give you your items once you venmo \(price) to this address:"
     }
     
@@ -59,16 +59,16 @@ extension PaymentViewController: ItemManagementDelegate {
     func pushToPaymentVC() {}
     
     func getCurrentVendingItems() -> [VendingItem] {
-        return vendingItems
+        return delegate.getCurrentVendingItems()
     }
     
     func changeQuantity(for objectID: String, by delta: Int) {
-        vendingItems.updateQuantity(by: delta, for: objectID)
+        delegate.changeQuantity(for: objectID, by: delta)
         reloadUI()
     }
     
     func resetQuantity(for objectID: String) {
-        vendingItems.resetQuantity(for: objectID)
+        delegate.resetQuantity(for: objectID)
         reloadUI()
     }
     

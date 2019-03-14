@@ -24,6 +24,7 @@ class CartTableViewCell: UITableViewCell, Reusable {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        selectionStyle = .none
         setupImageView()
         setupNameLabel()
         setupPriceLabel()
@@ -114,7 +115,6 @@ extension CartTableViewCell {
     }
     
     @objc private func removeButtonPressed(_ sender: UIButton) {
-        sender.isUserInteractionEnabled = false
         removeAction?()
     }
 }
