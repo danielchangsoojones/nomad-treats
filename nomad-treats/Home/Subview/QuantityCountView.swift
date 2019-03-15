@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuantityCountView: UIStackView {
+class QuantityCountView: UIStackView {    
     var minusButton: UIButton!
     var plusButton: UIButton!
     private let countLabel = UILabel()
@@ -42,9 +42,6 @@ class QuantityCountView: UIStackView {
     
     private func setupCountLabel() {
         countLabel.font = UIFont.systemFont(ofSize: 18, weight: .light)
-        
-        //TODO: eventually can remove this
-        countLabel.text = String(1)
         countLabel.textAlignment = .center
         addArrangedSubview(countLabel)
     }
@@ -55,5 +52,11 @@ class QuantityCountView: UIStackView {
             plusButton.setImage(plusImage, for: .normal)
         }
         addArrangedSubview(plusButton)
+    }
+    
+    //For iOS 9 iPads, we need to set an intrinsic content size
+    //or else sometimes it's all smushed
+    override var intrinsicContentSize: CGSize {
+        return CGSize(width: 0, height: 50)
     }
 }
