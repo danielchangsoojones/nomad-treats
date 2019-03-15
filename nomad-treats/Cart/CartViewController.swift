@@ -68,6 +68,13 @@ extension CartViewController: UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(cellType: CartTableViewCell.self)
+        
+        //for iOS 9 devices, the cart view controller on the paymentVC
+        //was getting stuck underneath the nav bar. This fixes it for now.
+        //Technically, not the greatest fix to hard code this, but it works
+        //for now.
+        let yOffset = UIApplication.shared.statusBarFrame.height + self.navigationController!.navigationBar.frame.size.height
+        tableView.contentInset = UIEdgeInsets(top: yOffset, left: 0, bottom: 0, right: 0)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
