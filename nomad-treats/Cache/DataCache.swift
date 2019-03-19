@@ -24,6 +24,7 @@ class DataCache {
             let query = VendingItemParse.query() as! PFQuery<VendingItemParse>
             query.cachePolicy = shouldUpdateCache ? .networkOnly : .cacheElseNetwork
             query.whereKey(VendingItemParse.Keys.owner, equalTo: DataCache.owner ?? "")
+            query.order(byDescending: "updatedAt")
             query.findObjectsInBackground { (vendingItemsParse, error) in
                 if let vendingItemsParse = vendingItemsParse {
                     let vendingItems = vendingItemsParse.map({ (vendingItemParse) -> VendingItem in
