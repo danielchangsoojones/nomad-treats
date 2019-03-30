@@ -39,6 +39,7 @@ class CartViewController: UIViewController {
         self.tableView = cartView.tableView
         cartView.cashButton.addTarget(self, action: #selector(cashButtonPressed), for: .touchUpInside)
         cartView.venmoButton.addTarget(self, action: #selector(venmoButtonPressed), for: .touchUpInside)
+        cartView.requestProductView.letUsKnowButton.addTarget(self, action: #selector(letUsKnowButtonPressed), for: .touchUpInside)
         
         if !shouldShowPaymentButtons {
             cartView.hidePaymentButtons()
@@ -118,5 +119,9 @@ extension CartViewController {
     
     @objc private func venmoButtonPressed() {
         delegate.pushToPaymentVC()
+    }
+    
+    @objc private func letUsKnowButtonPressed() {
+        SCLAlertView().showInfo("Product Idea", subTitle: "Tell your driver about your idea for a product to put in our vending machines!")
     }
 }

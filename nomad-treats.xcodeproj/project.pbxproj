@@ -37,6 +37,7 @@
 		925C525D2238F44900F43264 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C525C2238F44900F43264 /* UIImageViewExtension.swift */; };
 		925C52602238FC6800F43264 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C525F2238FC6800F43264 /* PaymentViewController.swift */; };
 		925C52622238FCA400F43264 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C52612238FCA400F43264 /* PaymentView.swift */; };
+		9278C061224F068D006B035A /* RequestProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9278C060224F068D006B035A /* RequestProductView.swift */; };
 		B6D968C0134308BA7F41A3D8 /* Pods_nomad_treats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7390E05CCA94E7A3C1C21A /* Pods_nomad_treats.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		925C525C2238F44900F43264 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		925C525F2238FC6800F43264 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		925C52612238FCA400F43264 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
+		9278C060224F068D006B035A /* RequestProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProductView.swift; sourceTree = "<group>"; };
 		DE8DC859A41F23AD3891F489 /* Pods-nomad-treats.debug (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomad-treats.debug (staging).xcconfig"; path = "Pods/Target Support Files/Pods-nomad-treats/Pods-nomad-treats.debug (staging).xcconfig"; sourceTree = "<group>"; };
 		E8F7FB130F91080B6AAFFC92 /* Pods-nomad-treats.debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomad-treats.debug (production).xcconfig"; path = "Pods/Target Support Files/Pods-nomad-treats/Pods-nomad-treats.debug (production).xcconfig"; sourceTree = "<group>"; };
 		F9762D3B00DB0DE77BB0ED59 /* Pods-nomad-treats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomad-treats.release.xcconfig"; path = "Pods/Target Support Files/Pods-nomad-treats/Pods-nomad-treats.release.xcconfig"; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 		925C523D2238C6BA00F43264 /* Cart */ = {
 			isa = PBXGroup;
 			children = (
+				9278C05F224F05FD006B035A /* Subview */,
 				925C524C2238DFD700F43264 /* Cells */,
 				925C523E2238C6D400F43264 /* CartViewController.swift */,
 				925C52402238C6E300F43264 /* CartView.swift */,
@@ -298,6 +301,14 @@
 				925C52612238FCA400F43264 /* PaymentView.swift */,
 			);
 			path = Payment;
+			sourceTree = "<group>";
+		};
+		9278C05F224F05FD006B035A /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				9278C060224F068D006B035A /* RequestProductView.swift */,
+			);
+			path = Subview;
 			sourceTree = "<group>";
 		};
 		B33F4C23A86CF2CF4D164EFA /* Pods */ = {
@@ -462,6 +473,7 @@
 				925C52212238A19600F43264 /* Enviroment.swift in Sources */,
 				925C520C22389A2000F43264 /* AppDelegate.swift in Sources */,
 				925C52582238EF3400F43264 /* BaseParseObject.swift in Sources */,
+				9278C061224F068D006B035A /* RequestProductView.swift in Sources */,
 				925C52442238CA7800F43264 /* Line.swift in Sources */,
 				925C52502238E1D100F43264 /* UnderlinedButton.swift in Sources */,
 				925C52332238B19F00F43264 /* ChoicesViewController.swift in Sources */,

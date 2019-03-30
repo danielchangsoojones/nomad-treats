@@ -20,6 +20,7 @@ class CartView: UIView {
     var cashButton: UIButton!
     private var paymentButtonStackView: UIStackView!
     var tableView: UITableView!
+    var requestProductView: RequestProductView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,6 +28,7 @@ class CartView: UIView {
         setupTotalPriceLabel()
         setupPaymentButtonStackView()
         setupPayWithLabel()
+        setupRequestProductView()
         setupTableView()
     }
     
@@ -107,7 +109,16 @@ class CartView: UIView {
         self.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
             make.leading.trailing.top.equalToSuperview()
+            make.bottom.equalTo(requestProductView.snp.top)
+        }
+    }
+    
+    private func setupRequestProductView() {
+        requestProductView = RequestProductView()
+        addSubview(requestProductView)
+        requestProductView.snp.makeConstraints { (make) in
             make.bottom.equalTo(bottomContainer.snp.top)
+            make.leading.trailing.equalToSuperview()
         }
     }
 }
