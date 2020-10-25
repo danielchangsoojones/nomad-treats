@@ -60,7 +60,12 @@ class PriceComparisonViewController: UIViewController {
         titleLabel.textAlignment = .center
         titleLabel.font = .systemFont(ofSize: 90, weight: .bold)
         titleLabel.numberOfLines = 2
-        titleLabel.text = "nomad rides is always \ncheaper than \(competitorApp)"
+        let main_string = "nomad rides is always \ncheaper than \(competitorApp)"
+        let string_to_color = "nomad rides"
+        let range = (main_string as NSString).range(of: string_to_color)
+        let attributedString = NSMutableAttributedString(string: main_string)
+        attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.blueRibbon , range: range)
+        titleLabel.attributedText = attributedString
         innerView.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { (make) in
             make.leading.trailing.equalToSuperview().inset(10)
@@ -154,7 +159,7 @@ class PriceComparisonViewController: UIViewController {
         }
         innerView.addSubview(androidDownloadIcon)
         androidDownloadIcon.snp.makeConstraints { (make) in
-            make.leading.equalTo(iOSDownloadIcon.snp.trailing).offset(20)
+            make.leading.equalTo(iOSDownloadIcon.snp.trailing)
             make.bottom.equalTo(iOSDownloadIcon)
             make.height.equalTo(iOSDownloadIcon)
         }
