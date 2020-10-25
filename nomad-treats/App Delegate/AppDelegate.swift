@@ -26,7 +26,7 @@ extension AppDelegate {
     }
     
     private func toHomeVC() {
-        let homeVC = HomeViewController()
+        let homeVC = UberRideViewController()
         let navController = UINavigationController(rootViewController: homeVC)
         setInitial(vc: navController)
     }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38B4EA9B25452F5E003ECED4 /* UberRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B4EA9A25452F5E003ECED4 /* UberRideViewController.swift */; };
+		38B4EA9F2545521C003ECED4 /* PriceComparisonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B4EA9E2545521C003ECED4 /* PriceComparisonViewController.swift */; };
 		925C520C22389A2000F43264 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C520B22389A2000F43264 /* AppDelegate.swift */; };
 		925C520E22389A2000F43264 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C520D22389A2000F43264 /* HomeViewController.swift */; };
 		925C521322389A2100F43264 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 925C521222389A2100F43264 /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 /* Begin PBXFileReference section */
 		2B7390E05CCA94E7A3C1C21A /* Pods_nomad_treats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nomad_treats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E0A691E19F444541C8C4B0A /* Pods-nomad-treats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nomad-treats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nomad-treats/Pods-nomad-treats.debug.xcconfig"; sourceTree = "<group>"; };
+		38B4EA9A25452F5E003ECED4 /* UberRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberRideViewController.swift; sourceTree = "<group>"; };
+		38B4EA9E2545521C003ECED4 /* PriceComparisonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceComparisonViewController.swift; sourceTree = "<group>"; };
 		925C520822389A2000F43264 /* nomad-treats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nomad-treats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		925C520B22389A2000F43264 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		925C520D22389A2000F43264 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +98,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38B4EA9925452F45003ECED4 /* Uber Ride Pitch */ = {
+			isa = PBXGroup;
+			children = (
+				38B4EA9A25452F5E003ECED4 /* UberRideViewController.swift */,
+				38B4EA9E2545521C003ECED4 /* PriceComparisonViewController.swift */,
+			);
+			path = "Uber Ride Pitch";
+			sourceTree = "<group>";
+		};
 		57318B94B4D97C4C5E717EEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +136,7 @@
 		925C520A22389A2000F43264 /* nomad-treats */ = {
 			isa = PBXGroup;
 			children = (
+				38B4EA9925452F45003ECED4 /* Uber Ride Pitch */,
 				925C525E2238FC5200F43264 /* Payment */,
 				925C52592238F1AC00F43264 /* Settings */,
 				925C52512238EE9A00F43264 /* Cache */,
@@ -457,6 +471,7 @@
 				925C523F2238C6D400F43264 /* CartViewController.swift in Sources */,
 				925C52352238B2C800F43264 /* UIViewControllerExtension.swift in Sources */,
 				925C52202238A19600F43264 /* Configuration.swift in Sources */,
+				38B4EA9B25452F5E003ECED4 /* UberRideViewController.swift in Sources */,
 				925C52532238EEAA00F43264 /* DataCache.swift in Sources */,
 				925C52302238A4DA00F43264 /* UIColorExtension.swift in Sources */,
 				925C525B2238F1C400F43264 /* SettingsViewController.swift in Sources */,
@@ -469,6 +484,7 @@
 				925C52292238A41300F43264 /* HomeView.swift in Sources */,
 				925C52602238FC6800F43264 /* PaymentViewController.swift in Sources */,
 				925C52622238FCA400F43264 /* PaymentView.swift in Sources */,
+				38B4EA9F2545521C003ECED4 /* PriceComparisonViewController.swift in Sources */,
 				925C523C2238B8A700F43264 /* DoubleExtension.swift in Sources */,
 				925C52212238A19600F43264 /* Enviroment.swift in Sources */,
 				925C520C22389A2000F43264 /* AppDelegate.swift in Sources */,
