@@ -12,6 +12,9 @@ class UberRideViewController: UIViewController {
     private var nomadPrice = 0.0
     private var uberPrice = 0.0
     private var lyftPrice = 0.0
+    private var nomadLabel: UITextField!
+    private var uberLabel: UITextField!
+    private var lyftLabel: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +30,9 @@ class UberRideViewController: UIViewController {
     }
     
     private func setupView() {
-        let nomadLabel = setupTextfield(placeholder: "Enter Nomad Price")
-        let uberLabel = setupTextfield(placeholder: "Enter Uber Price")
-        let lyftLabel = setupTextfield(placeholder: "Enter Lyft Price")
+        nomadLabel = setupTextfield(placeholder: "Enter Nomad Price")
+        uberLabel = setupTextfield(placeholder: "Enter Uber Price")
+        lyftLabel = setupTextfield(placeholder: "Enter Lyft Price")
         uberLabel.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
         }
@@ -56,6 +59,15 @@ class UberRideViewController: UIViewController {
     }
     
     @objc private func nextButtonPressed() {
+        if let nomadPrice = nomadLabel.text {
+            self.nomadPrice = Double(nomadPrice) ?? 0.0
+        }
+        if let uberPrice = uberLabel.text {
+            self.uberPrice = Double(uberPrice) ?? 0.0
+        }
+        if let lyftPrice = lyftLabel.text {
+            self.lyftPrice = Double(lyftPrice) ?? 0.0
+        }
         let priceComparisonVC = PriceComparisonViewController(nomadPrice: nomadPrice, uberPrice: uberPrice, lyftPrice: lyftPrice)
         navigationController?.pushViewController(priceComparisonVC, animated: true)
     }
