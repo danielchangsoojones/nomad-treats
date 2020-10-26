@@ -22,7 +22,7 @@ class LoadingViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         resetRide()
-        gameTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(loadPriceComparison), userInfo: nil, repeats: true)
+        gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(loadPriceComparison), userInfo: nil, repeats: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
