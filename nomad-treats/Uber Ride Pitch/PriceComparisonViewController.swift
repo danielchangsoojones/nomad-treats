@@ -14,7 +14,7 @@ class PriceComparisonViewController: UIViewController {
     private var lyftPrice: Double
     
     private var innerView: UIView!
-    private var titleLabel: UILabel!
+//    private var titleLabel: UILabel!
     private var comparePricesLabel: UILabel!
     private var competitorLogo: UIButton!
     private var nomadLogo: UIButton!
@@ -37,7 +37,7 @@ class PriceComparisonViewController: UIViewController {
         view.backgroundColor = .blueRibbon
         setupInnerView()
         let currentApp = lyftPrice > uberPrice ? "lyft" : "uber"
-        setupTitleLabel(competitorApp: currentApp)
+//        setupTitleLabel(competitorApp: currentApp)
         setupComparePricesLabel()
         setupLogos(competitorApp: currentApp)
         setupPriceLabels(competitorApp: currentApp)
@@ -55,23 +55,23 @@ class PriceComparisonViewController: UIViewController {
         }
     }
     
-    private func setupTitleLabel(competitorApp: String) {
-        titleLabel = UILabel()
-        titleLabel.textAlignment = .center
-        titleLabel.font = .systemFont(ofSize: 90, weight: .bold)
-        titleLabel.numberOfLines = 2
-        let main_string = "nomad rides is always \ncheaper than \(competitorApp)"
-        let string_to_color = "nomad rides"
-        let range = (main_string as NSString).range(of: string_to_color)
-        let attributedString = NSMutableAttributedString(string: main_string)
-        attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.blueRibbon , range: range)
-        titleLabel.attributedText = attributedString
-        innerView.addSubview(titleLabel)
-        titleLabel.snp.makeConstraints { (make) in
-            make.leading.trailing.equalToSuperview().inset(10)
-            make.top.equalToSuperview().inset(15)
-        }
-    }
+//    private func setupTitleLabel(competitorApp: String) {
+//        titleLabel = UILabel()
+//        titleLabel.textAlignment = .center
+//        titleLabel.font = .systemFont(ofSize: 90, weight: .bold)
+//        titleLabel.numberOfLines = 2
+//        let main_string = "nomad rides is always \ncheaper than \(competitorApp)"
+//        let string_to_color = "nomad rides"
+//        let range = (main_string as NSString).range(of: string_to_color)
+//        let attributedString = NSMutableAttributedString(string: main_string)
+//        attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.blueRibbon , range: range)
+//        titleLabel.attributedText = attributedString
+//        innerView.addSubview(titleLabel)
+//        titleLabel.snp.makeConstraints { (make) in
+//            make.leading.trailing.equalToSuperview().inset(10)
+//            make.top.equalToSuperview().inset(15)
+//        }
+//    }
     
     private func setupComparePricesLabel() {
         comparePricesLabel = UILabel()
@@ -86,7 +86,7 @@ class PriceComparisonViewController: UIViewController {
         comparePricesLabel.snp.makeConstraints { (make) in
             make.leading.equalToSuperview().inset(40)
             make.width.equalTo(300)
-            make.top.equalTo(titleLabel.snp.bottom).offset(35)
+            make.top.equalToSuperview().offset(35)
             make.height.equalTo(300)
         }
     }
@@ -140,28 +140,28 @@ class PriceComparisonViewController: UIViewController {
     }
     
     private func setupDownloadIcons() {
-        let iOSDownloadIcon = UIButton()
-        if let image = UIImage(named: "ios_download") {
-            iOSDownloadIcon.setImage(image, for: .normal)
-            iOSDownloadIcon.imageView?.contentMode = .scaleAspectFit
-        }
-        innerView.addSubview(iOSDownloadIcon)
-        iOSDownloadIcon.snp.makeConstraints { (make) in
-            make.trailing.equalTo(titleLabel.snp.centerX).inset(30)
-            make.bottom.equalToSuperview().inset(15)
-            make.height.equalTo(65)
-        }
-        
-        let androidDownloadIcon = UIButton()
-        if let image = UIImage(named: "android_download") {
-            androidDownloadIcon.setImage(image, for: .normal)
-            androidDownloadIcon.imageView?.contentMode = .scaleAspectFit
-        }
-        innerView.addSubview(androidDownloadIcon)
-        androidDownloadIcon.snp.makeConstraints { (make) in
-            make.leading.equalTo(iOSDownloadIcon.snp.trailing)
-            make.bottom.equalTo(iOSDownloadIcon)
-            make.height.equalTo(iOSDownloadIcon)
-        }
+//        let iOSDownloadIcon = UIButton()
+//        if let image = UIImage(named: "ios_download") {
+//            iOSDownloadIcon.setImage(image, for: .normal)
+//            iOSDownloadIcon.imageView?.contentMode = .scaleAspectFit
+//        }
+//        innerView.addSubview(iOSDownloadIcon)
+//        iOSDownloadIcon.snp.makeConstraints { (make) in
+//            make.trailing.equalTo(titleLabel.snp.centerX).inset(30)
+//            make.bottom.equalToSuperview().inset(15)
+//            make.height.equalTo(65)
+//        }
+//
+//        let androidDownloadIcon = UIButton()
+//        if let image = UIImage(named: "android_download") {
+//            androidDownloadIcon.setImage(image, for: .normal)
+//            androidDownloadIcon.imageView?.contentMode = .scaleAspectFit
+//        }
+//        innerView.addSubview(androidDownloadIcon)
+//        androidDownloadIcon.snp.makeConstraints { (make) in
+//            make.leading.equalTo(iOSDownloadIcon.snp.trailing)
+//            make.bottom.equalTo(iOSDownloadIcon)
+//            make.height.equalTo(iOSDownloadIcon)
+//        }
     }
 }

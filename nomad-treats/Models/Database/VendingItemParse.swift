@@ -21,4 +21,7 @@ class VendingItemParse: BaseParseObject, PFSubclassing {
     @NSManaged var name: String
     @NSManaged var price: Double
     @NSManaged var photo: PFFileObject
+    @NSManaged var lyftPrice: Double
+    @NSManaged var uberPrice: Double
+    @NSManaged var nomadPrice: Double
 }
