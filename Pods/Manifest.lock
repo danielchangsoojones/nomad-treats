@@ -1,11 +1,11 @@
 PODS:
-  - Bolts/Tasks (1.9.0)
+  - Bolts/Tasks (1.9.1)
   - Former (1.7.0)
-  - Parse (1.17.2):
-    - Parse/Core (= 1.17.2)
-  - Parse/Core (1.17.2):
-    - Bolts/Tasks (~> 1.9)
-  - Parse/UI (1.17.2):
+  - Parse (1.19.1):
+    - Parse/Core (= 1.19.1)
+  - Parse/Core (1.19.1):
+    - Bolts/Tasks (= 1.9.1)
+  - Parse/UI (1.19.1):
     - Parse/Core
   - Reusable (4.0.5):
     - Reusable/Storyboard (= 4.0.5)
@@ -17,37 +17,42 @@ PODS:
 
 DEPENDENCIES:
   - Former (~> 1.7.0)
-  - Parse (~> 1.17.0-alpha.3)
-  - Parse/UI
+  - Parse (from `https://github.com/parse-community/Parse-SDK-iOS-OSX.git`)
+  - Parse/UI (from `https://github.com/parse-community/Parse-SDK-iOS-OSX.git`)
   - Reusable
   - SCLAlertView (from `https://github.com/vikmeup/SCLAlertView-Swift.git`)
   - SnapKit (~> 4.0.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - Bolts
+  https://github.com/CocoaPods/Specs.git:
     - Former
-    - Parse
     - Reusable
     - SnapKit
+  trunk:
+    - Bolts
 
 EXTERNAL SOURCES:
+  Parse:
+    :git: https://github.com/parse-community/Parse-SDK-iOS-OSX.git
   SCLAlertView:
     :git: https://github.com/vikmeup/SCLAlertView-Swift.git
 
 CHECKOUT OPTIONS:
+  Parse:
+    :commit: 9d1b958fc146312b06a571b4ee367106e0b0f9b2
+    :git: https://github.com/parse-community/Parse-SDK-iOS-OSX.git
   SCLAlertView:
     :commit: 86ea7613c99cd4896765fabfa773b39b40bc8590
     :git: https://github.com/vikmeup/SCLAlertView-Swift.git
 
 SPEC CHECKSUMS:
-  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
   Former: f78c0c28b84aadc4da3bf29e97220c8db188048d
-  Parse: 3b31a3dd1777b07ee7f0caee32fafbff544483a5
+  Parse: e40fdb9c7d665823b7fe9865949cac9a53eb2ce7
   Reusable: 188be1a54ac0691bc66e5bb24ec6eb91971b315b
   SCLAlertView: 9fea8ac145c0bd4989ef6abe1d3859b48f458986
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
 
-PODFILE CHECKSUM: bd19098fccaaadab92396f9a8c31919c3be674e2
+PODFILE CHECKSUM: 5f29ae52afd4cc97f6af9891c7f72d6f9d24f857
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.2

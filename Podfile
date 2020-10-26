@@ -10,7 +10,7 @@ pod 'SnapKit', '~> 4.0.0'
 pod "Former", '~> 1.7.0'
 pod 'SCLAlertView', :git => 'https://github.com/vikmeup/SCLAlertView-Swift.git'
 pod 'Reusable'
-pod 'Parse', '~> 1.17.0-alpha.3'
-pod 'Parse/UI'
+pod 'Parse', :git => 'https://github.com/parse-community/Parse-SDK-iOS-OSX.git'
+pod 'Parse/UI', :git => 'https://github.com/parse-community/Parse-SDK-iOS-OSX.git'
 
 end

@@ -51,7 +51,7 @@ class PriceComparisonViewController: UIViewController {
         view.addSubview(innerView)
         innerView.snp.makeConstraints { (make) in
             make.leading.trailing.bottom.equalToSuperview().inset(30)
-            make.top.equalToSuperview().inset(120)
+            make.top.equalToSuperview().inset(65)
         }
     }
     
@@ -84,7 +84,7 @@ class PriceComparisonViewController: UIViewController {
         comparePricesLabel.layer.borderWidth = 2
         innerView.addSubview(comparePricesLabel)
         comparePricesLabel.snp.makeConstraints { (make) in
-            make.leading.equalToSuperview().inset(70)
+            make.leading.equalToSuperview().inset(40)
             make.width.equalTo(300)
             make.top.equalTo(titleLabel.snp.bottom).offset(35)
             make.height.equalTo(300)
